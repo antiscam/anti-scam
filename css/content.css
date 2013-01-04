@@ -3,6 +3,8 @@
 
 #full_content
 {
+	padding-top:20px;
+	padding-bottom:20px;
 	width: 960px;
 	overflow: hidden;
 }
@@ -33,6 +35,15 @@
 	float:left;
 	margin-left:20px;
 	margin-right:20px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+	
+
 }
 
 #right-content
@@ -56,6 +67,12 @@
 
 
 #menu{
+		/*box shadow, now has no shadow because inset means no*/
+		/*attributes:vertical position, horizontal position, blur radius, spread radius */
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+
 	}
 
 #menu a{
@@ -72,13 +89,17 @@
 /*********** BUTTON **********************/
 /*****************************************/
 .button {
+	/*box shadow, now has no shadow because inset means no*/
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	
-	background:-o-linear-gradient(bottom, #f4f2f2 5%, #c6c4c4 100%);background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f2f2), color-stop(1, #c6c4c4) ); 
-background:-moz-linear-gradient( center top, #f4f2f2 5%, #c6c4c4 100% );
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f2f2", endColorstr="#c6c4c4");background: -o-linear-gradient(top,#f4f2f2,c6c4c4);
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #f4f2f2 5%, #c6c4c4 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f2f2), color-stop(1, #c6c4c4) ); 
+	background:-moz-linear-gradient( center top, #f4f2f2 5%, #c6c4c4 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f2f2", endColorstr="#c6c4c4");
+	background: -o-linear-gradient(top,#f4f2f2,c6c4c4);
 	
 	
 	background-color:#ededed;
