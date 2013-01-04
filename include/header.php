@@ -48,12 +48,12 @@ session_start();
 							  <tr>
 								<td>Email:</td>
 								<td> <input type='input' id='email_input' class='input' name='email' size='17' /></td>
-								<td> <button type='sumbit' class='button' name='login_button'>Login</button></td>
+								<td> <button type='sumbit' class='button button_header'  name='login_button'>Login</button></td>
 							  </tr>
 							  <tr>
 								<td>Password:</td>
 								<td><input type='password' id='password_input' class='input' name='password' size='17'/></td>
-								<td><button type='sumbit' class='button' name='join_button'>Join</button></td>
+								<td><button type='sumbit' class='button button_header' name='join_button'>Join</button></td>
 							  </tr>
 							  <tr>
 							  <td>
