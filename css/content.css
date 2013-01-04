@@ -25,6 +25,7 @@
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius:15px;
+
 }
 
 .content
@@ -37,21 +38,22 @@
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
-	
 	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
-	
+
 
 }
 #main-content
 {
-	background-color: #f7f5ce;
+	background-color: #c4fdd4;
+	//border:4px solid #f7f5ce;
 }
 
 #join-content
 {
 	background-color: #dcf1f9;
+	//border:4px solid #dcf1f9;
 }
 
 
@@ -59,7 +61,7 @@
 #right-content
 {
 	background-color:gray;
-	width: 186px;
+	width: 180px;
 	height: 600px;
 	float: left;
 	margin-right:20px;
@@ -71,10 +73,69 @@
 }
 
 
+/*****************************************/
+/*********** Join	 **********************/
+/*****************************************/
+#joinform{
+	width:290px;
+	margin:0 auto;
+}
+#joinform h1,h2{
+		text-align:center;
+}
+#joinform label{
+font-size:23px;
+}
+#joinform p{
+font-size:15px;
+}
+#joinform button{
+	width:155px;
+	height:60px;
+	margin:0 auto;
+	color:white;
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	text-shadow:0px 0px 0px #ffffff;
+	font-size:20px;
+	padding-bottom:5px;
+	border:2px solid #00a9ec;
+}
+
+#joinform button:hover{
+	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
+	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#02aaec", endColorstr="#caedfb");
+	background: -o-linear-gradient(top,#02aaec,#caedfb);
+}
+.textbox{
+
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	height:30px;
+	border:2px solid #bacbd2;
+	text-align:center;
+	font-weight:lighter;
+	margin:0px;
+}
+
+#last-name-field{
+	margin-left:5px;
+}
+.text-box-spec{
+	width:285px;
+}
 
 
-
-
+/*****************************************/
+/*********** menu   **********************/
+/*****************************************/
 
 #menu{
 		/*box shadow, now has no shadow because inset means no*/
@@ -109,7 +170,7 @@
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f2f2), color-stop(1, #c6c4c4) ); 
 	background:-moz-linear-gradient( center top, #f4f2f2 5%, #c6c4c4 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f2f2", endColorstr="#c6c4c4");
-	background: -o-linear-gradient(top,#f4f2f2,c6c4c4);
+	background: -o-linear-gradient(top,#f4f2f2,#c6c4c4);
 	
 	
 	background-color:#ededed;
