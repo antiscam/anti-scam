@@ -5,7 +5,7 @@
 
 <div id='full_content'>
 	<div id='menu'>
-    	<a href='#' class='menu_button'>Home</a>
+    	<a href='#' class='button button_menu'>Home</a>
     </div>
     <div id='content'>
     </div>

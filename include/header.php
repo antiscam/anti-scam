@@ -34,7 +34,7 @@ session_start();
 								<a href='account.php'>$first_name_db</a>
 							</p>
 							<form action='logout.php'>
-								<button type='submit' name='logout_button' class='login_button button_logout' >Logout</button>
+								<button type='submit' name='logout_button' class='button' id='button_logout'>Logout</button>
 							</form>
 						</div>
 						
@@ -48,12 +48,12 @@ session_start();
 							  <tr>
 								<td>Email:</td>
 								<td> <input type='input' id='email_input' class='input' name='email' size='17' /></td>
-								<td> <button type='sumbit' class='login_button' name='login_button'>Login</button></td>
+								<td> <button type='sumbit' class='button' name='login_button'>Login</button></td>
 							  </tr>
 							  <tr>
 								<td>Password:</td>
 								<td><input type='password' id='password_input' class='input' name='password' size='17'/></td>
-								<td><button type='sumbit' class='login_button' name='join_button'>Join</button></td>
+								<td><button type='sumbit' class='button' name='join_button'>Join</button></td>
 							  </tr>
 							  <tr>
 							  <td>
