@@ -34,7 +34,7 @@ session_start();
 								<a href='account.php'>$first_name_db</a>
 							</p>
 							<form action='logout.php'>
-								<button type='submit' name='logout_button' class='login_button' href='logout.php'>Logout</button>
+								<button type='submit' name='logout_button' class='login_button button_logout' >Logout</button>
 							</form>
 						</div>
 						

@@ -28,7 +28,7 @@ session_start();
 				$user_id_db = $row["user_id"];
 				
 					//sessions
-					$_SESSION['user_id'] = $user_id;
+					//$_SESSION['user_id'] = $user_id;
 					$_SESSION['email'] = $email_p;
 					$_SESSION['password'] = $password_p;
 					header("location: index.php");		
