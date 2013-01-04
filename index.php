@@ -3,14 +3,15 @@
 	include("include/header.php");
 ?>
 
+<!---------->
+<!-- MENU -->
+<!---------->
 <div id='full_content'>
-	<div id='menu'>
-    	<a href='#' class='button button_menu'>Home</a>
-    </div>
-    <div id='content'>
-    </div>
-    <div id='right-content'>
-    </div>
+	<?php include("left-menu.php"); ?>
+    
+    <?php include("main-content.php"); ?>
+    
+    <?php include("right-content.php"); ?>
 </div>
 
 

@@ -53,7 +53,8 @@ session_start();
 							  <tr>
 								<td>Password:</td>
 								<td><input type='password' id='password_input' class='input' name='password' size='17'/></td>
-								<td><button type='sumbit' class='button button_header' name='join_button'>Join</button></td>
+								<td>
+								<a href='join.php' class='button button_header' name='join_button'>Join</a></td>
 							  </tr>
 							  <tr>
 							  <td>
