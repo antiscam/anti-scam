@@ -10,8 +10,8 @@
 <!---------->
 <div id='full_content'>
 	<?php include("left-menu.php"); ?>
-    <div id='join-content' class='content'>
-    	<div id='joinform'>
+    <div class='content form-content'>
+    	<div class='form'>
             <h1>SIGN UP</h1>
             <h2>IT'S FREE</h2>
             <form action='join.php' method='POST'>
@@ -23,7 +23,8 @@
                     <input type='field' placeholder='My Email Address' id='email-field' class='textbox text-box-spec' name='email'/>
                 </p>
                 <p>
-                    <input type='field' placeholder='Retype Email Address' id='retype-email-field' class='textbox text-box-spec' name='retype-email'/>
+                    <input type='field' placeholder='Retype Email Address' id='retype-email-field' class='textbox text-box-spec' 
+                    name='retype-email'/>
                 </p>
                 <p>
                     <input type='field' placeholder='My Password' id='password-field' class='textbox text-box-spec' name='password'/>
