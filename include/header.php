@@ -1,6 +1,5 @@
 <!-- Connect AND SEE IF ITS SESSION OR COOKIE -->
 <?php
-session_start();
 	include("connect.php");
 ?>
 
@@ -60,10 +59,10 @@ session_start();
                 </div>
                 <div id='login_form'>
                 <?php
-				if((isset($_SESSION['email'])))
+				if((isset($_COOKIE['firstname'])))
 				{
-					$email_s = $_SESSION['email'];
-					$item_query = mysql_query("SELECT first_name FROM user WHERE email = '$email_s'") or die(mysql_error());  
+					$email_c = $_COOKIE['email'];
+					$item_query = mysql_query("SELECT first_name FROM user WHERE email = '$email_c'") or die(mysql_error());  
 					$row = mysql_fetch_assoc($item_query);
 						$first_name_db = $row['first_name'];
 					

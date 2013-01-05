@@ -1,6 +1,5 @@
 <!-- Connect -->
 <?php
-session_start();
 	include("include/connect.php");
 
 
@@ -26,11 +25,13 @@ session_start();
 			{
 				$row = mysql_fetch_assoc($sql);
 				$user_id_db = $row["user_id"];
+				$first_name_db = $row['first_name'];
+				$email_db = $row['email'];
 				
 					//sessions
-					//$_SESSION['user_id'] = $user_id;
-					$_SESSION['email'] = $email_p;
-					$_SESSION['password'] = $password_p;
+					setcookie("id", $user_id_db, time()+172800, '/anti-scam/');   
+					setcookie("firstname", $first_name_db, time()+172800,'/anti-scam/'); 
+					setcookie("email", $email_db, time()+172800,'/anti-scam/'); 	
 					header("location: index.php");		
 			}
 			else
