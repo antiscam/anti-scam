@@ -14,7 +14,7 @@
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/footer.css' />
          
 <!-- ******************************************************************************************-->
-
+<!--
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script src="http://threedubmedia.googlecode.com/files/jquery.event.drag-2.0.min.js"></script>
 		<script src="http://github.com/cowboy/jquery-resize/raw/v1.1/jquery.ba-resize.min.js"></script>
@@ -35,7 +35,7 @@
 			  $("#scroll").scrollbars();  		  		
 		});
 		</script>
-
+-->
         <!--
          <link rel="stylesheet" type="text/css" href="css/scrollbars.css" />
 
