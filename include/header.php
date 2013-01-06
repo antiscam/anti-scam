@@ -15,7 +15,7 @@
          
 <!-- ******************************************************************************************-->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script src="http://threedubmedia.googlecode.com/files/jquery.event.drag-2.0.min.js"></script>
 		<script src="http://github.com/cowboy/jquery-resize/raw/v1.1/jquery.ba-resize.min.js"></script>
 		<script src="http://remysharp.com/demo/mousehold.js"></script>
@@ -23,11 +23,17 @@
 		
         
 		<script src="js/aplweb.scrollbars.js"></script>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script>
-			$(document).ready(function() {
-				$("#scroll").scrollbars();
-			});
+		$(document).ready(function(){
+			 $("#terms").click(function(){
+				 $(".about").load("./about/terms.txt");
+		 	 });
+			  $("#privacy-policy").click(function(){
+				$(".about").load("./about/privacy-policy.txt");
+			  });
+			  $("#scroll").scrollbars();  		  		
+		});
 		</script>
         
         <!--

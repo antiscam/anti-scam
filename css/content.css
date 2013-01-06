@@ -89,6 +89,13 @@ text-align:center;
 margin:0 auto;
 }
 
+.fakelink{
+color:blue;
+text-decoration:underline;
+}
+.fakelink:hover{
+	cursor:pointer;
+}
 /*****************************************/
 /*********** normal form(join form) ******/
 /*****************************************/
@@ -280,3 +287,14 @@ text-align:left;
 
 }
 
+/**********************/
+/****** about *********/
+/**********************/
+.about{
+width:470px;
+height:560px;
+margin-left:18px;
+margin-top:20px;
+overflow:auto;
+//border:1px solid red;
+}
