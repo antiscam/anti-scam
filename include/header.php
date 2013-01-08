@@ -9,51 +9,21 @@
 	<head>
     <meta charset="UTF-8" />
     	<title>Welcome</title>
+        <script type = "text/javascript" src = "http://ssl.privacysafeguard.com/htmlpsg/scripts/chrome.js"></script>
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/header.css' />
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/content.css' />
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/footer.css' />
          
-<!-- ******************************************************************************************-->
-<!--
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script src="http://threedubmedia.googlecode.com/files/jquery.event.drag-2.0.min.js"></script>
-		<script src="http://github.com/cowboy/jquery-resize/raw/v1.1/jquery.ba-resize.min.js"></script>
-		<script src="http://remysharp.com/demo/mousehold.js"></script>
-		<script src="https://raw.github.com/brandonaaron/jquery-mousewheel/master/jquery.mousewheel.js"></script>
-		
-        
-		<script src="js/aplweb.scrollbars.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script>
-		$(document).ready(function(){
-			 $("#terms").click(function(){
-				 $(".about").load("./about/terms.txt");
-		 	 });
-			  $("#privacy-policy").click(function(){
-				$(".about").load("./about/privacy-policy.txt");
-			  });
-			  $("#scroll").scrollbars();  		  		
-		});
-		</script>
--->
-        <!--
-         <link rel="stylesheet" type="text/css" href="css/scrollbars.css" />
-
-		<link rel="stylesheet" type="text/css" href="css/scrollbars-blue.css" />
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.event.drag-2.0.min.js"></script>
-		<script src="js/jquery.ba-resize.min.js"></script>
-		<script src="js/mousehold.js"></script>
-		<script src="js/jquery.mousewheel.js"></script>
-		
-		<script src="js/aplweb.scrollbars.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				$(".scroll").scrollbars();
-			});
-		</script>
--->        
+		<!----------------------------------------------------------------------------------------->
+        <!--------------------------------- SCROLL BAR -------------------------------------------->
+       <!----------------------------------------------------------------------------------------->
+          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars.css' />
+             <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars-blue.css' />
+                <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars-itunes.css' />
+                
+                
+            
+                
 <!-- ******************************************************************************************-->
     </head>
     <body id='body'>
