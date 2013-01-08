@@ -22,16 +22,43 @@
 		{
 			echo "Missing field! Please fill in  all field!";
 		}
-		else if((strlen($_POST['first_name_input']) < 1) && (strlen($_POST['last_name_input']) < 1) && (strlen($_POST['email_input']) < 1) && (strlen($_POST['password_input']) < 1))
+		else if((strlen($_POST['first_name_input']) < 2))
 		{
-			echo"Error - field is too short!";
+			echo "Error - first name is too short!";
 		}
-		
+		else if((strlen($_POST['last_name_input']) < 2))
+		{
+			echo "Error - last name is too short!";
+		}
+		else if((strlen($_POST['email_input']) < 4))
+		{
+			echo"Error - email is too short!";
+		}
+		else if((strlen($_POST['password_input']) < 6))
+		{
+			echo"Error - password is too short!";
+		}
+		else if((strlen($_POST['first_name_input']) >= 50))
+		{
+			echo "Error - first name is too long!";
+		}
+		else if((strlen($_POST['last_name_input']) >= 50))
+		{
+			echo "Error - last name is too long!";
+		}
+		else if((strlen($_POST['email_input']) >= 30))
+		{
+			echo "Error - email is too long!";
+		}
+		else if((strlen($_POST['password_input']) >= 50))
+		{
+			echo "Error - password is too long!";
+		}
 		else if(($_POST['email_input'] != $_POST['re_email_input']) || ($_POST['password_input'] != $_POST['re_password_input']))
 		{
 			echo"Email or Password do not match!";
 		}
-		else if((!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['email_input']) > 0) ||(!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['password_input']) > 0))
+		else if((!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['email_input']) > 0))
 		{
 			echo"Invalid e-mail address";
 		}
@@ -59,7 +86,6 @@
 				echo "Accont has been created!";
 			}
 		}
-		
 	 }
 ?>
 
