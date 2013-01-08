@@ -54,9 +54,13 @@
 		{
 			echo "Error - password is too long!";
 		}
-		else if(($_POST['email_input'] != $_POST['re_email_input']) || ($_POST['password_input'] != $_POST['re_password_input']))
+		else if(($_POST['email_input'] != $_POST['re_email_input']))
 		{
-			echo"Email or Password do not match!";
+			echo"Email do not match!";
+		}
+		else if(($_POST['password_input'] != $_POST['re_password_input']))
+		{
+				echo" Password do not match!";
 		}
 		else if((!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['email_input']) > 0))
 		{
