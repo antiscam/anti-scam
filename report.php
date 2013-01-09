@@ -3,7 +3,12 @@
 	include("include/header.php");
 ?>
 
-
+<?php
+	if(isset($_POST['signup']))
+	{
+		
+	}
+?>
 <!---------->
 <!-- MENU -->
 <!---------->
