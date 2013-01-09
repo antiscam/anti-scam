@@ -12,62 +12,105 @@
 		exit();
 	}
 ?>
+<style>
+.errorClass{
+ border: solid 1px red;
+}
+.defaultClass{
+/*defaults*/
+border: 1px solid white;
+}
+</style>
 
 
  <!-- SUBMIT BUTTON -->
 <?php 
 	if(isset($_POST['signup'])) //if user hit submit button 
 	 {
-		 if((empty($_POST['first_name_input'])) || (empty($_POST['last_name_input'])) || (empty($_POST['email_input'])) || empty($_POST['re_email_input']) || empty($_POST['password_input']) || empty($_POST['re_password_input']) || empty($_POST['gender']))
+		 $join_error_class = "";
+		 
+		 if(empty($_POST['first_name_input']))
+		 {
+			 echo "Missing field! Please fill in  all field! first name";
+			 $error_class_first = "errorClass"; 
+		 }
+		 else if(empty($_POST['last_name_input']))
+		 {
+			 echo "Missing field! Please fill in  all field! last name";
+			  $error_class_last = "errorClass"; 
+		 }
+		  else if((empty($_POST['email_input'])) || (empty($_POST['re_email_input'])) || (empty($_POST['password_input'])) || (empty($_POST['re_password_input'])))
+		 {
+			 echo "Missing field! Please fill in  all field!";
+			 $error_class_email = "errorClass";
+			 $error_class_re_email = "errorClass";
+			$error_class_password = "errorClass";
+			$error_class_re_password = "errorClass";  
+		} 
+		else if(empty($_POST['gender']))
 		{
-			echo "Missing field! Please fill in  all field!";
+				echo "Missing field! Please fill in  all field!";
 		}
 		else if((strlen($_POST['first_name_input']) < 2))
 		{
 			echo "Error - first name is too short!";
+			$error_class_first = "errorClass";
 		}
 		else if((strlen($_POST['last_name_input']) < 2))
 		{
 			echo "Error - last name is too short!";
+			$error_class_first = "errorClass";
 		}
 		else if((strlen($_POST['email_input']) < 4))
 		{
 			echo"Error - email is too short!";
+			$error_class_email = "errorClass";
 		}
 		else if((strlen($_POST['password_input']) < 6))
 		{
 			echo"Error - password is too short!";
+			$error_class_password = "errorClass";
 		}
 		else if((strlen($_POST['first_name_input']) >= 50))
 		{
 			echo "Error - first name is too long!";
+			$error_class_first = "errorClass";
 		}
 		else if((strlen($_POST['last_name_input']) >= 50))
 		{
 			echo "Error - last name is too long!";
+				$error_class_last = "errorClass";
 		}
 		else if((strlen($_POST['email_input']) >= 30))
 		{
 			echo "Error - email is too long!";
+			$error_class_email = "errorClass";
 		}
 		else if((strlen($_POST['password_input']) >= 50))
 		{
 			echo "Error - password is too long!";
+			$error_class_password = "errorClass";
 		}
 		else if(($_POST['email_input'] != $_POST['re_email_input']))
 		{
 			echo"Email do not match!";
+			$error_class_email = "errorClass";
+			$error_class_re_email = "errorClass";
 		}
 		else if(($_POST['password_input'] != $_POST['re_password_input']))
 		{
 				echo" Password do not match!";
+				$error_class_password = "errorClass";
+				$error_class_re_password = "errorClass";
 		}
 		else if((!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['email_input']) > 0))
 		{
 			echo"Invalid e-mail address";
+			$error_class_email = "errorClass";
 		}
 		else
 		{
+			
 			$first_name_p = $_POST['first_name_input'];
 			$last_name_p = $_POST['last_name_input'];
 			$email_p = $_POST['email_input'];
@@ -88,9 +131,11 @@
 				$register = mysql_query("INSERT INTO user (first_name, last_name, email, password, gender, user_date)
 												VALUES('$first_name_p','$last_name_p','$email_p','$password_p',  '$gender_p', 'now()')") or die(mysql_error());
 				echo "Accont has been created!";
+			
+			}
 			}
 		}
-	 }
+	 
 ?>
 
 <!---------->
@@ -98,44 +143,9 @@
 <!---------->
 <div id='full_content'>
 	<?php include("left-menu.php"); ?>
-    <div class='content form-content'>
-    	<div class='form'>
-            <h1>SIGN UP</h1>
-            <h2>IT'S FREE</h2>
-            <form action='join.php' method='POST'>
-                <p>
-                    <input type='field' placeholder='My First Name'  id='first-name-field' class='textbox' name='first_name_input' 
-                    	value="<?php if(isset($_POST['first_name_input'])){echo htmlentities($_POST['first_name_input']);}?>" />
-                    <input type='field' placeholder='My Last Name' id='last-name-field' class='textbox' name='last_name_input'
-                         value="<?php if(isset($_POST['last_name_input'])){echo htmlentities($_POST['last_name_input']);}?>"/>
-                </p>
-                <p>
-                    <input type='field' placeholder='My Email Address' id='email-field' class='textbox text_box_spec' name='email_input'
-                          value="<?php if(isset($_POST['email_input'])){echo htmlentities($_POST['email_input']);}?>"/>
-                </p>
-                <p>
-                    <input type='field' placeholder='Retype Email Address' id='retype-email-field' class='textbox text_box_spec' name='re_email_input'/>
-                </p>
-                <p>
-                    <input type='password' placeholder='My Password' id='password-field' class='textbox text_box_spec' name='password_input' />
-                </p>
-                <p>
-                    <input type='password' placeholder='Retype My Password' id='retype-password-field' class='textbox text_box_spec' name='re_password_input'/>
-                </p>
-                <p>
-                    <input type="radio" id='femaler-radio' class='radio' name="gender"  value="female"> <label>Female</label>
-                    <input type="radio" id='male-radio' class='radio' name="gender"  value="male"> <label>Male</label>
-               </p> 
-               <p>
-                    By clicking Sing Up, you agree to our <a href='#'>Terms</a> and that you have read our <a href='#'>Anti-Scam Policy					
-                    </a>
-               </p>
-               <p>
-                    <button type="submit" class='button' id='button_signup' name="signup" >Sign Up</button>
-               </p>  
-            </form>
-        </div>
-    </div>
+    
+    <?php include("join_content.php"); ?>
+    
     <?php include("right-content.php"); ?>
 </div>
 
