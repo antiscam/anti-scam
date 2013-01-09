@@ -14,7 +14,7 @@
         <div id="TabbedPanels1" class="TabbedPanels">
           <ul class="TabbedPanelsTabGroup">
             <li class="TabbedPanelsTab" tabindex="0">Scam</li>
-            <li class="TabbedPanelsTab" tabindex="0">Honesty</li>
+            <li class="TabbedPanelsTab honesty" tabindex="0">Honesty</li>
           </ul>
           <div class="TabbedPanelsContentGroup">
 			          <!--Start of the content1-->
@@ -29,22 +29,30 @@
                             <form action='report_scam.php' method='POST'>
                                 <h2>Opponent's Information:</h2> 
                                 <p>
-                                    <input type='field' placeholder="Opponent's Name"  id='first-name-field' class='textbox' name='opponent-name'/>
+                                    <input type='field' placeholder="Opponent's Name"  id='first_name_field' class='textbox' name='opponent_name'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder="Opponent's Address" id='opponent-address-field' class='textbox text-box-spec' name
-                                    ='opponent-address'/>
+                                    <input type='field' placeholder="Opponent's Address" id='opponent_address_field' class='textbox text_box_spec' name='opponent_address'/>
                                 </p>
+                                 <p>
+                                    <input type='field' placeholder="Opponent's City" id='opponent_city_field' class='textbox' name='opponent_city'/>
+                                     <input type='field' placeholder="Opponent's State" id='opponent_state_field' class='textbox' name='opponent_state'/>
+                                </p>
+                                 <p>
+                                    <input type='field' placeholder="Opponent's Country" id='opponent_country_field' class='textbox' name='opponent_country'/>
+                                     <input type='field' placeholder="Opponent's Zip Code" id='opponent_zipcode_field' class='textbox' name='opponent_zipcode'/>
+                                </p>
+                                
                                 <p>
-                                    <input type='field' placeholder="Opponent's Phone" id='opponent-phone-field' class='textbox text-box-spec'
+                                    <input type='field' placeholder="Opponent's Phone" id='opponent-phone-field' class='textbox text_box_spec'
                                      name='opponent-phone'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder="Opponent's Email Address" id='opponent-email-field' class='textbox text-box-spec' 
-                                    name='opponent-email'/>
+                                    <input type='field' placeholder="Opponent's Email Address" id='opponent_email_field' class='textbox text_box_spec' 
+                                    name='opponent_email'/>
                                 </p>
                                 <p>
-                                    <textarea rows="5" cols="50" placeholder="What has Happened?" id="scroll" class="textbox report-textarea"></textarea>
+                                    <textarea rows="5" cols="50" placeholder="What has Happened?" id="scroll" class="textbox report_textarea"></textarea>
                 
                                 </p>
                                 

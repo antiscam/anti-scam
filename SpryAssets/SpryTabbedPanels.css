@@ -72,7 +72,7 @@
 	position: relative;
 	top: 0px;
 	float: left;
-	margin: 0px 0px 0px 1px;
+	//margin: 0px 0px 0px 1px;
 	font: bold 1.8em sans-serif;
 	color:#059bd7;
 	list-style: none;
@@ -90,11 +90,11 @@
 	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
 	background: -o-linear-gradient(top,#caedfb,#02aaec);
-	
+	/*
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
-
+*/
 
 	
 }
@@ -163,6 +163,8 @@
 .TabbedPanelsContent {
 	overflow: hidden;
 	padding: 4px;
+	
+	
 }
 
 /* This selector is an example of how to change the appearnce of the currently

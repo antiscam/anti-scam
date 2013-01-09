@@ -110,17 +110,17 @@
                          value="<?php if(isset($_POST['last_name_input'])){echo htmlentities($_POST['last_name_input']);}?>"/>
                 </p>
                 <p>
-                    <input type='field' placeholder='My Email Address' id='email-field' class='textbox text-box-spec' name='email_input'
+                    <input type='field' placeholder='My Email Address' id='email-field' class='textbox text_box_spec' name='email_input'
                           value="<?php if(isset($_POST['email_input'])){echo htmlentities($_POST['email_input']);}?>"/>
                 </p>
                 <p>
-                    <input type='field' placeholder='Retype Email Address' id='retype-email-field' class='textbox text-box-spec' name='re_email_input'/>
+                    <input type='field' placeholder='Retype Email Address' id='retype-email-field' class='textbox text_box_spec' name='re_email_input'/>
                 </p>
                 <p>
-                    <input type='password' placeholder='My Password' id='password-field' class='textbox text-box-spec' name='password_input' />
+                    <input type='password' placeholder='My Password' id='password-field' class='textbox text_box_spec' name='password_input' />
                 </p>
                 <p>
-                    <input type='password' placeholder='Retype My Password' id='retype-password-field' class='textbox text-box-spec' name='re_password_input'/>
+                    <input type='password' placeholder='Retype My Password' id='retype-password-field' class='textbox text_box_spec' name='re_password_input'/>
                 </p>
                 <p>
                     <input type="radio" id='femaler-radio' class='radio' name="gender"  value="female"> <label>Female</label>

@@ -54,7 +54,6 @@ scrollbar-3d-light-color: black;
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 
-
 }
 #main-content
 {
@@ -100,7 +99,7 @@ text-decoration:underline;
 /*********** normal form(join form) ******/
 /*****************************************/
 .form{
-	width:290px;
+	width:300px;
 	margin:0 auto;
 }
 .form h1,h2{
@@ -142,16 +141,17 @@ font-size:15px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
 	height:30px;
+	width:138px;
 	border:2px solid #bacbd2;
 	text-align:center;
 	font-weight:lighter;
 	margin:0;
 }
 
-#last-name-field{
+#last_name_field{
 	margin-left:5px;
 }
-.text-box-spec{
+.text_box_spec{
 	width:285px;
 }
 
@@ -263,12 +263,13 @@ font-size:15px;
 .report{
 
 width:470px;
-height:530px;
+height:550px;
 margin:0px;
 margin-left:20px;
 overflow-y:scroll;
-
-
+-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
 }
 .report h2{
 text-align:left;
@@ -279,7 +280,7 @@ text-align:left;
 	margin-top:-15px;
 }
 
-.report-textarea{
+.report_textarea{
 width:auto;
 height:auto;
 text-align:left;
@@ -293,11 +294,16 @@ background-color:#dcf1f9;
 	background-color:#f7c5e0;
 	padding-left:20px;
 	margin:0;
+
 }
 .report-honestybg{
 	background-color:#dcf1f9;
 	padding-left:20px;
 	margin:0;
+}
+
+.honesty{
+margin-left:2px;
 }
 
 /**********************/
