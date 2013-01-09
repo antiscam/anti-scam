@@ -9,20 +9,14 @@
 	<head>
     <meta charset="UTF-8" />
     	<title>Welcome</title>
-        <script type = "text/javascript" src = "http://ssl.privacysafeguard.com/htmlpsg/scripts/chrome.js"></script>
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/header.css' />
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/content.css' />
          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/css/footer.css' />
          
-		<!----------------------------------------------------------------------------------------->
+
         <!--------------------------------- SCROLL BAR -------------------------------------------->
-       <!----------------------------------------------------------------------------------------->
-          <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars.css' />
-             <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars-blue.css' />
-                <link rel='stylesheet' type='text/css' href='http://localhost/anti-scam/scrollbar example/css/scrollbars-itunes.css' />
-                
-                
-            
+		<link rel="stylesheet" type="text/css" href="http://localhost/anti-scam/scrollbar/scrolbar.css"  />
+
                 
 <!-- ******************************************************************************************-->
     </head>
