@@ -1,10 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
+#body{
 margin:0px;
-}
+-webkit-scrollbar-arrow-color: yellow;
+scrollbar-base-color: black;
+scrollbar-dark-shadow-color: yellow;
+scrollbar-track-color: green;
 
+scrollbar-shadow-color: white;
+scrollbar-highlight-color: silver;
+scrollbar-3d-light-color: black;
+}
 
 #full_content
 {
@@ -14,23 +21,118 @@ margin:0px;
 	overflow: hidden;
 }
 
-#menu
-{
-	width: 204px;
-	height: 600px;
-	float: left;
-	margin-left:20px;
-	
-	/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
-	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
-    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%); 
-	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #FFFFFF), color-stop(2, #D2D2D2)); /* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
-	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #FFFFFF 0%, #D2D2D2 200%); 
 
+#searchMenu{
+	/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #dcf1f9), color-stop(2, #d1e5ec)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #dcf1f9 0%, #d1e5ec 200%); 
+
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+.searchMenuHeader{
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius:15px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-webkit-border-bottom-right-radius:0xp;
+	
+	
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	
+	border:0px solid inherit;
+	margin:0px;
+	margin-top:-20px;
+	padding:0px;
+	width:204px;	
+	height:40px;
+}
+.searchMenuHeader h2{
+//	margin-top:5px;
+	padding-top:5px;
+	text-align:center;
+}
 
+
+.searchMenuContent{
+	width:160px;
+	height:540px;
+	margin:0px;
+	margin-left:20px;
+}
+#searchSelect{
+border:2px solid #bacbd2; 
+}
+#opponentInfoBox input{
+margin-bottom:5px;
+}
+#searchButton{
+	
+	width:65px;
+	height:30px;
+	margin:0 auto;
+	margin-top:115px;
+	color:white;
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	text-shadow:0px 0px 0px #ffffff;
+	font-size:15px;
+	padding-bottom:5px;
+	border:2px solid #00a9ec;
+}
+
+#searchButton hover{
+	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
+	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#02aaec", endColorstr="#caedfb");
+	background: -o-linear-gradient(top,#02aaec,#caedfb);
+}
+
+
+
+.searchMenuContent p{
+
+	font-size:12px;
+}
+.searchMenuContent h3{
+	margin-top:-10px;
+	margin-bottom:1px;
+}
+.searchMenuContent select{
+	width:160px;
+}
+
+#searchTextBox{
+	height:auto;
+	width:150px;
+}
+
+#searchTextBoxSmall{
+height:auto;
+width:65px;
+}
+
+#searchNameText{
+	margin-top:5px;
+	margin-bottom:2px;
 }
 
 .content
@@ -94,6 +196,7 @@ text-decoration:underline;
 .form{
 	width:300px;
 	margin:0 auto;
+
 }
 .form h1,h2{
 		text-align:center;
@@ -155,20 +258,35 @@ font-size:15px;
 /*defaults*/
 border: 1px solid white;
 }
+
 /*****************************************/
 /*********** menu   **********************/
 /*****************************************/
 
-#menu{
-		/*box shadow, now has no shadow because inset means no*/
-		/*attributes:vertical position, horizontal position, blur radius, spread radius */
-	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+.menu
+{
+	width: 204px;
+	height: 600px;
+	float: left;
+	margin-left:20px;
+	
+	/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #FFFFFF), color-stop(2, #D2D2D2)); /* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #FFFFFF 0%, #D2D2D2 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #FFFFFF 0%, #D2D2D2 200%); 
+
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius:15px;
+
+		-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
 
-	}
 
-#menu a{
+.menu a{
 	font-size: 20px;
 	padding-top: 10px;
 	text-align:center;
@@ -265,10 +383,10 @@ width:470px;
 height:550px;
 margin:0px;
 margin-left:20px;
-overflow-y:scroll;
 -moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
+
 }
 .report h2{
 text-align:left;
@@ -349,20 +467,22 @@ top:0;
 
 
 /********* got to move thsi block later *******/
-#scrollbar1 { width: 520px; clear: both; margin: 20px 0 10px; border: 1px solid red;}
+
+#scrollbar1 { width: 450px; clear: both; margin: 20px 0 10px;}
 #scrollbar1 .viewport { width: 480px; height: 530px; overflow: hidden; position: relative; }
+#viewport{width: 400px; height: 500px; overflow: hidden; position: relative;}
 #scrollbar1 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
 #scrollbar1 .thumb .end,
-#scrollbar1 .thumb { background-color: #a8a8a8; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing in the middle of the scrollbar*/
+#scrollbar1 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing in the middle of the scrollbar*/
+
+
 #scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
-#scrollbar1 .track { background-color: #ccc; height: 100%; width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing that trackes the thing inside*/
+#scrollbar1 .track { background-color: #deedf0; height: 100%; width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing that trackes the thing inside*/
 #scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
 #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
 
 #scrollbar1 .disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
-
-
 
 
 /*************************************************************/
@@ -386,11 +506,5 @@ top:0;
 	
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
-	border-radius:6px;	
+	border-radius:6px;		
 }
-
-
-
-
-
-
