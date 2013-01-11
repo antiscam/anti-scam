@@ -1,17 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
-#body{
+body{
 margin:0px;
--webkit-scrollbar-arrow-color: yellow;
-scrollbar-base-color: black;
-scrollbar-dark-shadow-color: yellow;
-scrollbar-track-color: green;
-
-scrollbar-shadow-color: white;
-scrollbar-highlight-color: silver;
-scrollbar-3d-light-color: black;
 }
+
 
 #full_content
 {
@@ -155,7 +148,13 @@ font-size:15px;
 	width:285px;
 }
 
-
+.errorClass{
+ border: solid 1px red;
+}
+.defaultClass{
+/*defaults*/
+border: 1px solid white;
+}
 /*****************************************/
 /*********** menu   **********************/
 /*****************************************/
@@ -389,3 +388,9 @@ top:0;
 	-webkit-border-radius:6px;
 	border-radius:6px;	
 }
+
+
+
+
+
+

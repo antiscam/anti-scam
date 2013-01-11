@@ -11,6 +11,7 @@
     
     <?php include("main-content.php"); ?>
     
+    
     <?php include("right-content.php"); ?>
 </div>
 
