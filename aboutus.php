@@ -16,8 +16,8 @@
             <p>We are here to help preventing scams as much as possible by reporting them to our website. So everyone will have attention to them. We encourage you to read the followings: </p>
             <div id="privacy-policy" class="fakelink"> Privacy Policy</div> 
             <br/>
-            <div id="terms" class="fakelink">Terms</div>
-            <p> to use it to help you make informed decisions.</p>
+            <div id="terms" class="fakelink">Terms and Conditions</div>
+            <p> to use them to help you make informed decisions.</p>
 
         	
            	

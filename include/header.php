@@ -29,7 +29,10 @@
     <body id='body'>
     	<div id = 'background'>
             <div id='top-header'>
-            	<div id='title'>
+            	<div id='title'>                	
+                <a href='http://localhost/anti-scam/index.php'>
+                	<img src='images/siteName.png' />
+                    </a>
                 </div>
                 <div id='buyer_seller'>
                 </div>

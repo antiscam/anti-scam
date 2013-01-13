@@ -3,8 +3,31 @@
 
 #footer
 {
-	width: 960px;
-	height: 93px;
-	background-color:gray;
-	margin-top:20px;
+	width: 912px;
+	height: 90px;
+	background-color:#e7e7e7;
+	margin-top:10px;
+	margin-bottom:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	margin-left:20px;
+	
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 		
+}
+
+#footer a{
+	margin-left:53px;
+}
+
+#footer .links{
+padding-top:20px;
+}
+
+#copyriightWords{
+	margin-left:40px;
+	margin-top:25px;
+	font-size:12px;
 }

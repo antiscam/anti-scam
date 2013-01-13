@@ -11,13 +11,7 @@ height:auto;
 	padding-top:20px;
 	padding-bottom:20px;
 	width: 960px;
-	overflow: hidden;		
-}
-
-#background{
-	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
-	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
-	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+	overflow: hidden;
 }
 
 .content
