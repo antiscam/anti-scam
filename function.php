@@ -215,3 +215,39 @@ function hoesty_button()
 		}
 }
 ?>
+
+
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------ search.php  ---------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+<?php
+function search()
+{
+	$user_id_p = $_COOKIE['id'];
+	$types_p = $_POST['types'];
+	$id_p = $_POST['search_opponent_id'];
+	$name_p = $_POST['search_opponent_name'];
+	$address_p = $_POST['search_opponent_address'];
+	$city_p = $_POST['search_opponent_city'];
+	$state_p = $_POST['search_opponent_state'];
+	$country_p = $_POST['search_opponent_country'];
+	$zipcode_p = $_POST['search_opponent_zipcode'];
+	$email_p = $_POST['search_opponent_email'];
+	$phone = $_POST['search_opponent_phone'];
+	$category_p = $_POST['scam_category'];
+	$keyword_p = $_POST['keywords'];
+	
+	$women_query = mysql_query("SELECT * FROM report WHERE report_type LIKE '%$types_p%' || name_id LIKE '%$name_p%' || name LIKE '%$name_p%'  ||
+	address LIKE '%$address_p%' || city LIKE '%$city_p%' || state LIKE '%$state_p%' || country LIKE '%$country_p%' || zipcode LIKE '%$zipcode_p%' || 	
+	email LIKE '%$email_p%' || phone LIKE '%$phone%' || category LIKE '%$category_p%'  || story LIKE '%$keyword_p%'") 
+	or die(mysql_error());  
+	while($row = mysql_fetch_assoc($women_query))
+	{
+		//search content php
+	}
+	
+}
+?>
