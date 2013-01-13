@@ -143,11 +143,7 @@ function signup($error_class_first, $error_class_last,$error_class_email,$error_
 *******************/
 function scam_button()
 {
-	if(empty($_POST['scam_name']))
-		{
-			echo"enter scam name";
-		}
-		else if(empty($_POST['scam_story']))
+	 if(empty($_POST['scam_story']))
 		{
 			echo" enter story";
 		}
@@ -155,6 +151,7 @@ function scam_button()
 		{
 			$user_id_p = $_COOKIE['id'];
 			$scam_name_p = $_POST['scam_name'];
+			$scam_id_p = $_POST['scam_id'];
 			$scam_address_p = $_POST['scam_address'];
 			$scam_city_p = $_POST['scam_city'];
 			$scam_state_p = $_POST['scam_state'];
@@ -165,12 +162,12 @@ function scam_button()
 			$scam_text_p = $_POST['scam_story'];
 			$scam_category_p = $_POST['scam_category'];
 			
-			
 			//add this product into the database now
 			$sql = mysql_query("INSERT INTO report 
-				(user_id, report_type, name, address, city, state, country, zipcode, phone, email, story, category, likes, dislike,num_replys, num_view, date)
-						VALUES('$user_id_p', 'scam_report', '$scam_name_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', '$scam_country_p', 
-						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$scam_category_p', '0', '0', '0', '0', now())")
+				(user_id, report_type, name, name_id, address, city, state, country, zipcode, phone, email, story, category, likes,
+				 dislike,num_replys, num_view, date)
+						VALUES('$user_id_p', 'scam_report', '$scam_name_p', '$scam_id_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', 
+						'$scam_country_p', '$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$scam_category_p', '0', '0', '0', '0', now())")
 								 or die(mysql_error());
 		
 			echo "every thing is ok";
@@ -185,23 +182,21 @@ exit();
 
 function hoesty_button()
 {
-	if(empty($_POST['honesty_name']))
-		{
-			echo"enter honesty name";
-		}
-		else if(empty($_POST['honesty_story']))
+	 if(empty($_POST['honesty_story']))
 		{
 			echo" enter story";
 		}
 		else
 		{
+			$user_id_p = $_COOKIE['id'];
 			$honesty_name_p = $_POST['honesty_name'];
+			$honesty_id_p = $_POST['honesty_id'];
 			$honesty_address_p = $_POST['honesty_address'];
 			$honesty_city_p = $_POST['honesty_city'];
 			$honesty_state_p = $_POST['honesty_state'];
 			$honesty_country_p = $_POST['honesty_country'];
 			$honesty_zipcode_p = $_POST['honesty_zipcode'];
-			$honesty_phone = $_POST['honesty_phone'];
+			$honesty_phone_p = $_POST['honesty_phone'];
 			$honesty_email_p = $_POST['honesty_email'];
 			$honesty_text_p = $_POST['honesty_story'];
 			$honesty_category_p = $_POST['honesty_category'];
@@ -209,8 +204,9 @@ function hoesty_button()
 			//add this product into the database now
 			$sql = mysql_query("INSERT INTO report 
 				(user_id, report_type, name, address, city, state, country, zipcode, phone, email,story,category, likes, dislike, num_replys, num_view, date)
-						VALUES('$user_id_p', 'honesty_report', '$scam_name_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', '$scam_country_p', 
-						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$honesty_category_p', '0', '0', '0', '0', now())")
+						VALUES('$user_id_p', '$honesty_name_p', '$honesty_id_p', '$honesty_address_p', '$honesty_city_p', '$honesty_state_p',
+						'$honesty_country_p', '$honesty_zipcode_p', '$honesty_phone_p', '$honesty_email_p', '$honesty_text_p', '$honesty_category_p',
+						 '0', '0', '0', '0', now())")
 								 or die(mysql_error());
 			
 			//stop adding again when refresh
