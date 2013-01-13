@@ -8,7 +8,7 @@
             <a href="aboutus.php">Privacy Policy</a>
             <a href="advertising.php">Advertising</a>
         </div>
-        <p id='copyriightWords'>Copyright &copy 2013 Anti0Scams</p>
+        <p id='copyriightWords'>Copyright &copy <script type="text/javascript">document.write((new Date()).getFullYear());</script> Anti0Scams. All Rights Reserved.</p>
     </div>
 </div><!-- end of background div -->
 
