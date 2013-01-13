@@ -41,7 +41,7 @@
             <select>
             <h3 id="searchNameText">Keywords:</h3>
             <input type='field' placeholder="Words in the Title/Story" id="searchTextBox" class='textbox' name='keywords'/>         
-            <button type="submit" id="searchButton" class='button' name="back" >Back</button>
+            <a  id="searchButton" class='button' name="back" >Back</a>            
 			<button type="submit" id="searchButton" class='button' name="search" >Search</button>
             
             </div>           
