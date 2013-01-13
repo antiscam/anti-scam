@@ -15,7 +15,7 @@
            <div id='hello' class='form report report-scambg'>";
     			// scrollbar 
 				echo"
-                <div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div id='viewport'><div class='overview'>
+                <div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div class='viewport'><div class='overview'>
                 
                         <h1>Report A Scam</h1>
                         <p id='layout-for-p'>Please provide informations as much as possible</p>

@@ -1,16 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
-#body{
+body{
 margin:0px;
--webkit-scrollbar-arrow-color: yellow;
-scrollbar-base-color: black;
-scrollbar-dark-shadow-color: yellow;
-scrollbar-track-color: green;
-
-scrollbar-shadow-color: white;
-scrollbar-highlight-color: silver;
-scrollbar-3d-light-color: black;
+height:auto;
 }
 
 #full_content
@@ -18,121 +11,13 @@ scrollbar-3d-light-color: black;
 	padding-top:20px;
 	padding-bottom:20px;
 	width: 960px;
-	overflow: hidden;
+	overflow: hidden;		
 }
 
-
-#searchMenu{
-	/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
-	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
-    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%); 
-	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #dcf1f9), color-stop(2, #d1e5ec)); 
-	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
-	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #dcf1f9 0%, #d1e5ec 200%); 
-
+#background{
 	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
-}
-
-.searchMenuHeader{
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius:15px;
-	border-bottom-left-radius:0px;
-	border-bottom-right-radius:0px;
-	-moz-border-radius-bottomleft:0px;
-	-moz-border-radius-bottomright:0px;
-	-webkit-border-bottom-left-radius:0px;
-	-webkit-border-bottom-right-radius:0xp;
-	
-	
-	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
-	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
-	background: -o-linear-gradient(top,#caedfb,#02aaec);
-	
-	border:0px solid inherit;
-	margin:0px;
-	margin-top:-20px;
-	padding:0px;
-	width:204px;	
-	height:40px;
-}
-.searchMenuHeader h2{
-//	margin-top:5px;
-	padding-top:5px;
-	text-align:center;
-}
-
-
-.searchMenuContent{
-	width:160px;
-	height:540px;
-	margin:0px;
-	margin-left:20px;
-}
-#searchSelect{
-border:2px solid #bacbd2; 
-}
-#opponentInfoBox input{
-margin-bottom:5px;
-}
-#searchButton{
-	
-	width:65px;
-	height:30px;
-	margin:0 auto;
-	margin-top:115px;
-	color:white;
-	/*gradient for the background of the button*/
-	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
-	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
-	background: -o-linear-gradient(top,#caedfb,#02aaec);
-	text-shadow:0px 0px 0px #ffffff;
-	font-size:15px;
-	padding-bottom:5px;
-	border:2px solid #00a9ec;
-}
-
-#searchButton hover{
-	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
-	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#02aaec", endColorstr="#caedfb");
-	background: -o-linear-gradient(top,#02aaec,#caedfb);
-}
-
-
-
-.searchMenuContent p{
-
-	font-size:12px;
-}
-.searchMenuContent h3{
-	margin-top:-10px;
-	margin-bottom:1px;
-}
-.searchMenuContent select{
-	width:160px;
-}
-
-#searchTextBox{
-	height:auto;
-	width:150px;
-}
-
-#searchTextBoxSmall{
-height:auto;
-width:65px;
-}
-
-#searchNameText{
-	margin-top:5px;
-	margin-bottom:2px;
 }
 
 .content
@@ -468,16 +353,19 @@ top:0;
 
 /********* got to move thsi block later *******/
 
-#scrollbar1 { width: 465px; clear: both; margin: 20px 0 10px;}
-#scrollbar1 .viewport { width: 480px; height: 530px; overflow: hidden; position: relative; }
-#viewport{width: 400px; height: 500px; overflow: hidden; position: relative;}
+#scrollbar1 { width: 465px; clear: both; margin: 0px 0 10px;}
+#scrollbar1 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
 #scrollbar1 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
-#scrollbar1 .thumb .end,
-#scrollbar1 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing in the middle of the scrollbar*/
+#scrollbar1 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+}/*the thing in the middle of the scrollbar*/
 
 
 #scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
-#scrollbar1 .track { background-color: #deedf0; height: 100%; width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;}/*the thing that trackes the thing inside*/
+#scrollbar1 .track { background-color: #deedf0; height: 100%; width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}/*the thing that trackes the thing inside*/
 #scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
 #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
 
@@ -507,4 +395,260 @@ top:0;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	border-radius:6px;		
+}
+
+/************************searchContent**********************/
+#searchContentHeader{	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cdedd5), color-stop(1, #87fca8) );
+	background:-moz-linear-gradient( center top, #cdedd5 5%, #87fca8 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdedd5', endColorstr='#87fca8');
+	background-color:#dfdfdf;/*dont know what is this*/
+	
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;		
+	height:65px;
+	width:100%;	
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+.title{
+	margin:0;
+	padding-top:10px;
+	padding-left:10px;
+	border:1px solid red;
+	width:200px;
+	height:20;
+		-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+.reportButton{	
+	width:65px;
+	height:30px;
+	margin:0;
+	padding:0px;
+	float:right;
+	margin-top:-25px;
+	margin-right:10px;
+	color:white;
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	text-shadow:0px 0px 0px #ffffff;
+	font-size:15px;
+	padding-bottom:5px;
+	border:2px solid #00a9ec;
+	
+}
+
+
+#reportButton hover{
+	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
+	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#02aaec", endColorstr="#caedfb");
+	background: -o-linear-gradient(top,#02aaec,#caedfb);
+}
+
+.searchHeaderResortBar{
+	margin-top:8px;
+	width:100%;
+	height:25px;
+
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	background-color:#dcf1f9;
+	
+	
+}
+
+.pageTracker{
+	margin-top:3px;
+	width:140px;
+	height:23px;
+	border:1px solid red;
+	margin-left:10px;
+	color:gray;
+}
+
+#resortBar{
+	margin-top:-23px;
+	margin-right:10px;
+	white-space:nowrap;
+	float:right;
+	
+}
+
+.searchContent{
+	border:1px solid gray;
+	width:400px;
+	height:500px;
+	margin-left:0px;
+}
+.searchStory{
+	margin-top:20px;
+	margin-left:5px;
+}
+.searchTitle{
+	border:1px solid red;
+	height:20px;
+	width:250px;	
+	
+}
+
+.searchDate{
+	margin-top:-17px;
+	margin-right:15px;
+	float:right;
+}
+
+.searchAuthor{
+	font-size:10px;
+	margin-left:7px;
+}
+.searchStoryContent{
+	border:1px solid red;
+	width:370px;
+	height:40px;
+	overflow:hidden;
+}
+
+.separatingLine{
+	margin-top:20px;
+border:1px solid gray;
+}
+
+
+#searchMenu{
+	/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #dcf1f9), color-stop(2, #d1e5ec)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #dcf1f9 0%, #d1e5ec 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #dcf1f9 0%, #d1e5ec 200%); 
+
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+.searchMenuHeader{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius:15px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-webkit-border-bottom-right-radius:0xp;
+	
+	
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	
+	border:0px solid inherit;
+	margin:0px;
+	margin-top:-20px;
+	padding:0px;
+	width:204px;	
+	height:40px;
+}
+.searchMenuHeader h2{
+//	margin-top:5px;
+	padding-top:5px;
+	text-align:center;
+}
+
+
+.searchMenuContent{
+	width:160px;
+	height:540px;
+	margin:0px;
+	margin-left:20px;
+}
+#searchSelect{
+border:2px solid #bacbd2; 
+}
+#opponentInfoBox input{
+margin-bottom:5px;
+}
+#searchButton{
+	
+	width:65px;
+	height:30px;
+	margin:0 auto;
+	margin-top:115px;
+	color:white;
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	text-shadow:0px 0px 0px #ffffff;
+	font-size:15px;
+	padding-bottom:5px;
+	border:2px solid #00a9ec;
+}
+
+#searchButton hover{
+	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
+	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#02aaec", endColorstr="#caedfb");
+	background: -o-linear-gradient(top,#02aaec,#caedfb);
+}
+
+
+
+.searchMenuContent p{
+
+	font-size:12px;
+}
+.searchMenuContent h3{
+	margin-top:-10px;
+	margin-bottom:1px;
+}
+.searchMenuContent select{
+	width:160px;
+}
+
+#searchTextBox{
+	height:auto;
+	width:150px;
+}
+
+#searchTextBoxSmall{
+height:auto;
+width:65px;
+}
+
+#searchNameText{
+	margin-top:5px;
+	margin-bottom:2px;
+}
+
+/********************triangle*********************/
+.arrowRight {
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;	
+	border-left: 30px solid blue;
 }
