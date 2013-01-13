@@ -171,9 +171,7 @@ border: 1px solid white;
 }
 
 
-.menu a{
-	font-size: 20px;
-	padding-top: 10px;
+.menuLink{	
 	text-align:center;
 	margin-left: 18%;
 	margin-top: 20px;
@@ -237,11 +235,13 @@ border: 1px solid white;
 .button_menu
 {
 	padding:3px 5px;
+	padding-top:10px;
 	width: 110px;
 	height: 30px;
 	-moz-border-radius:50px;
 	-webkit-border-radius:50px;
 	border-radius:50px;
+	font-size: 20px;
 }
 
 #button_join{
@@ -360,7 +360,8 @@ top:0;
 }/*the thing in the middle of the scrollbar*/
 
 
-#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 15px; 
+margin-top:20px;}
 #scrollbar1 .track { background-color: #deedf0; height: 100%; width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
 -moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
@@ -371,6 +372,32 @@ top:0;
 
 #scrollbar1 .disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
+
+#scrollbar2 { width: 465px; clear: both; margin: 0px 0 10px;}
+#scrollbar2 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
+#scrollbar2 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
+#scrollbar2 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+}/*the thing in the middle of the scrollbar*/
+
+
+#scrollbar2 .scrollbar { position: relative; float: right; width: 15px; 
+margin-top:20px;}
+#scrollbar2 .track { background-color: #deedf0; 
+height: 100%; 
+width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}/*the thing that trackes the thing inside*/
+#scrollbar2 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar2 .thumb .end { overflow: hidden; height: 5px; width: 13px;}
+
+#scrollbar2 .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
 
 
 /*************************************************************/
@@ -588,12 +615,33 @@ border:2px solid #bacbd2;
 #opponentInfoBox input{
 margin-bottom:5px;
 }
-#searchButton{
+#searchButtonLink{
+	width:65px;
+	height:22px;
 	
+	margin:0 auto;
+	margin-top:115px;
+	color:white;
+	/*gradient for the background of the button*/
+	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #caedfb), color-stop(1, #02aaec) ); 
+	background:-moz-linear-gradient( center top, #caedfb 5%, #02aaec 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#caedfb", endColorstr="#02aaec");
+	background: -o-linear-gradient(top,#caedfb,#02aaec);
+	text-shadow:0px 0px 0px #ffffff;
+	font-size:15px;
+	padding:0px;
+	padding-top:5px;
+	
+	border:2px solid #00a9ec;
+}
+#searchButton{
+
 	width:65px;
 	height:30px;
 	margin:0 auto;
 	margin-top:115px;
+	margin-left:10px;
 	color:white;
 	/*gradient for the background of the button*/
 	background:-o-linear-gradient(bottom, #caedfb 5%, #02aaec 100%);

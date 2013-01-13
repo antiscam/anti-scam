@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 
-
+$("#honestyReport").click( $('#scrollbar2').tinyscrollbar());
 
 $("#terms").click(function(){
 	$(".about").load("./about/terms.txt");

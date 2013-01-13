@@ -6,7 +6,7 @@
         <div id='TabbedPanels1' class='TabbedPanels'>
           <ul class='TabbedPanelsTabGroup'>
             <li class='TabbedPanelsTab' tabindex='0'>Scam</li>
-            <li class='TabbedPanelsTab honesty' tabindex='0'>Honesty</li>
+            <li id='honestyReport' class='TabbedPanelsTab honesty' tabindex='0'>Honesty</li>
           </ul>
           <div class='TabbedPanelsContentGroup'>";
 			
@@ -24,6 +24,7 @@
                                 <h2>Opponent's Information:</h2> 
                                 <p>
                                     <input type='field' placeholder='Opponent's Name'  id='first_name_field' class='textbox' name='scam_name'/>
+									<input type='field' placeholder='Opponent's ID'  id='first_name_field' class='textbox' name='scam_id'/>
                                 </p>
                                 <p>
                                     <input type='field' placeholder='Opponent's Address' id='opponent_address_field' class='textbox text_box_spec' name='scam_address'/>
@@ -69,7 +70,7 @@
 
           		 //scrollbar 
                 echo"
-				<div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div class='viewport'><div class='overview'>
+				<div id='scrollbar2'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div class='viewport'><div class='overview'>
     
                         <h1>Report A Honesty</h1>
                         <p id='layout-for-p'>Please provide informations as much as possible</p>
@@ -78,6 +79,7 @@
                                 <h2>Opponent's Information:</h2> 
                                 <p>
                                     <input type='field' placeholder='Opponent's Name'  id='first_name_field' class='textbox' name='honesty_name'/>
+									<input type='field' placeholder='Opponent's ID'  id='first_name_field' class='textbox' name='honesty_id'/>
                                 </p>
                                 <p>
                                     <input type='field' placeholder='Opponent's Address' id='opponent_address_field' class='textbox text_box_spec' name='honesty_address'/>
