@@ -5,7 +5,7 @@
 /*********************
 <!-- signup button -->
 *********************/
-function signup()
+function signup($error_class_first, $error_class_last,$error_class_email,$error_class_re_email, $error_class_password, $error_class_re_passwor)
 {
 	$join_error_class = "";
 		 
@@ -14,24 +14,36 @@ function signup()
 			 echo "Missing field! Please fill in  all field! first name";
 			 $error_class_first = "errorClass"; 
 		 }
-		 else if(empty($_POST['last_name_input']))
+		  else if(empty($_POST['last_name_input']))
 		 {
 			 echo "Missing field! Please fill in  all field! last name";
 			  $error_class_last = "errorClass"; 
 		 }
-		  else if((empty($_POST['email_input'])) || (empty($_POST['re_email_input'])) || (empty($_POST['password_input'])) || (empty($_POST['re_password_input'])))
-		 {
+		else if(empty($_POST['email_input'])) 
+		{
 			 echo "Missing field! Please fill in  all field!";
 			 $error_class_email = "errorClass";
+		}
+		else if(empty($_POST['re_email_input'])) 
+		 {
+			 echo "Missing field! Please fill in  all field!";
 			 $error_class_re_email = "errorClass";
-			$error_class_password = "errorClass";
-			$error_class_re_password = "errorClass";  
 		} 
+		else if(empty($_POST['password_input'])) 
+		{
+			 echo "Missing field! Please fill in  all field!";
+			$error_class_password = "errorClass";
+		}
+		else if(empty($_POST['re_password_input']))
+		{
+			 echo "Missing field! Please fill in  all field!";
+			$error_class_re_password = "errorClass";  
+		}
 		else if(empty($_POST['gender']))
 		{
 				echo "Missing field! Please fill in  all field!";
 		}
-		else if((strlen($_POST['first_name_input']) < 2))
+		 else if((strlen($_POST['first_name_input']) < 2))
 		{
 			echo "Error - first name is too short!";
 			$error_class_first = "errorClass";
@@ -39,7 +51,7 @@ function signup()
 		else if((strlen($_POST['last_name_input']) < 2))
 		{
 			echo "Error - last name is too short!";
-			$error_class_first = "errorClass";
+			$error_class_last = "errorClass";
 		}
 		else if((strlen($_POST['email_input']) < 4))
 		{
@@ -108,12 +120,12 @@ function signup()
 			else
 			{
 				
-				$register = mysql_query("INSERT INTO user (first_name, last_name, email, password, gender, user_date)
-												VALUES('$first_name_p','$last_name_p','$email_p','$password_p',  '$gender_p', 'now()')") or die(mysql_error());
+				$register = mysql_query("INSERT INTO user (avatar_folder_name, avatar_user_name, first_name, last_name, email, password, gender, user_date)
+												VALUES('', '', '$first_name_p', '$last_name_p', '$email_p', '$password_p', '$gender_p', 'now()')")
+													 or die(mysql_error());
 				echo "Accont has been created!";
-			
 			}
-			}
+		}
  }
  ?>
  
@@ -151,22 +163,23 @@ function scam_button()
 			$scam_phone = $_POST['scam_phone'];
 			$scam_email_p = $_POST['scam_email'];
 			$scam_text_p = $_POST['scam_story'];
-			$category_p = $_POST['scam_category'];
+			$scam_category_p = $_POST['scam_category'];
 			
 			
 			//add this product into the database now
 			$sql = mysql_query("INSERT INTO report 
-				(user_id, report_type, name, address, city, state, country, 
-				zipcode, phone, email, story, category, like, dislike, num_replys, num_view, date)
-						VALUES('$user_id_p', 'scam, '$scam_name_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', '$scam_country_p', 
-						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$category_p', '0', '0', '0', '0', 'now()')") 
-							or die(mysql_error());
-			
-			//stop adding again when refresh
-			header("location: report.php");	
-			exit();
-			
+				(user_id, report_type, name, address, city, state, country, zipcode, phone, email, story, category, likes, dislike,num_replys, num_view, date)
+						VALUES('$user_id_p', 'scam_report', '$scam_name_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', '$scam_country_p', 
+						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$scam_category_p', '0', '0', '0', '0', now())")
+								 or die(mysql_error());
+		
+			echo "every thing is ok";
+//stop from adding double on refresh
+header("location: report.php");
+exit();
 		}
+		
+
 }
 
 
@@ -182,23 +195,23 @@ function hoesty_button()
 		}
 		else
 		{
-			$scam_name_p = $_POST['honesty_name'];
-			$scam_address_p = $_POST['honesty_address'];
-			$scam_city_p = $_POST['honesty_city'];
-			$scam_state_p = $_POST['honesty_state'];
-			$scam_country_p = $_POST['honesty_country'];
-			$scam_zipcode_p = $_POST['honesty_zipcode'];
-			$scam_phone = $_POST['honesty_phone'];
-			$scam_email_p = $_POST['honesty_email'];
-			$scam_text_p = $_POST['honesty_story'];
-			$category_p = $_POST['honesty_category'];
+			$honesty_name_p = $_POST['honesty_name'];
+			$honesty_address_p = $_POST['honesty_address'];
+			$honesty_city_p = $_POST['honesty_city'];
+			$honesty_state_p = $_POST['honesty_state'];
+			$honesty_country_p = $_POST['honesty_country'];
+			$honesty_zipcode_p = $_POST['honesty_zipcode'];
+			$honesty_phone = $_POST['honesty_phone'];
+			$honesty_email_p = $_POST['honesty_email'];
+			$honesty_text_p = $_POST['honesty_story'];
+			$honesty_category_p = $_POST['honesty_category'];
 			
 			//add this product into the database now
 			$sql = mysql_query("INSERT INTO report 
-				(user_id, report_type, name, address, city, state, country, 
-				zipcode, phone, email,story,category, like, dislike, num_replys, num_view, date)
+				(user_id, report_type, name, address, city, state, country, zipcode, phone, email,story,category, likes, dislike, num_replys, num_view, date)
 						VALUES('$user_id_p', 'honesty_report', '$scam_name_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', '$scam_country_p', 
-						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$category_p', '0', '0', '0', '0', now())") or die(mysql_error());
+						'$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$honesty_category_p', '0', '0', '0', '0', now())")
+								 or die(mysql_error());
 			
 			//stop adding again when refresh
 			header("location: report.php");	
