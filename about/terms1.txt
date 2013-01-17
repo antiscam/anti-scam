@@ -1,4 +1,6 @@
-
+<div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div>
+	<div class='viewport'>
+		<div class='overview'>
 <h1>Terms and Conditions</h1>
 <p>
 This agreement was written in English (US). To the extent any translated version of this agreement conflicts with the English version, the English version controls.
@@ -36,7 +38,7 @@ You will not solicit login information or access an account belonging to someone
 You will not bully, intimidate, or harass any user.
 You will not post content that: is hate speech, threatening, or pornographic; incites violence; or contains nudity or graphic or gratuitous violence.
 You will not develop or operate a third-party application containing alcohol-related, dating or other mature content (including advertisements) without appropriate age-based restrictions.
-You will follow our Promotions Guidelines and all applicable laws if you publicize or offer any contest, giveaway, or sweepstakes (¡°promotion¡±) on A0S.
+You will follow our Promotions Guidelines and all applicable laws if you publicize or offer any contest, giveaway, or sweepstakes promotion on A0S.
 You will not use A0S to do anything unlawful, misleading, malicious, or discriminatory.
 You will not do anything that could disable, overburden, or impair the proper working or appearance of A0S, such as a denial of service attack or interference with page rendering or other A0S functionality.
 You will not facilitate or encourage any violations of this Statement or our policies.
@@ -237,7 +239,7 @@ The Service is controlled, operated and administered by A0S from our offices wit
 you access the Service from a location outside the USA, you are responsible for compliance with
 all local laws. You agree that you will not use the A0S Content accessed through
 www.anti0scams.com in any country or in any manner prohibited by any applicable laws,
-restrictions or regulations.</div>
+restrictions or regulations.</p>
 
 <h1>Indemnification</h1>
 <p>
@@ -308,6 +310,8 @@ respect to such use. If any part of this agreement is determined to be invalid o
 pursuant to applicable law including, but not limited to, the warranty disclaimers and liability
 limitations set forth above, then the invalid or unenforceable provision will be deemed superseded
 by a valid, enforceable provision that most closely matches the intent of the original provision and
+
+
 the remainder of the agreement shall continue in effect.
 Unless otherwise specified herein, this agreement constitutes the entire agreement between the user
 and A0S with respect to the Site and it supersedes all prior or contemporaneous communications
@@ -323,3 +327,7 @@ agreement and all related documents be written in English.</p>
 A0S reserves the right, in its sole discretion, to change the Terms under which
 www.anti0scams.com is offered. The most current version of the Terms will supersede all previous
 versions. A0S encourages you to periodically review the Terms to stay informed of our updates.</p>
+
+</div>
+</div>
+</div>

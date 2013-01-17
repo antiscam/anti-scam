@@ -12,7 +12,7 @@
     
 	<div id='main-content' class='content'>
     	<div class="about">
-	        <h1 class="center">Welcome to Anti0Scams</h1>
+	        <h1 class="center boxShadow">Welcome to Anti0Scams</h1>
             <p>We are here to help preventing scams as much as possible by reporting them to our website. So everyone will have attention to them. We encourage you to read the followings: </p>
             <div id="privacy-policy" class="fakelink"> Privacy Policy</div> 
             <br/>

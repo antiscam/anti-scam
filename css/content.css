@@ -314,7 +314,9 @@ overflow:auto;
 //border:1px solid red;
 }
 
-
+.about h1{
+width:400px;
+}
 
 
 
@@ -374,8 +376,6 @@ margin-top:20px;}
 #scrollbar2 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
 #scrollbar2 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
 }/*the thing in the middle of the scrollbar*/
-
-
 #scrollbar2 .scrollbar { position: relative; float: right; width: 15px; 
 margin-top:20px;}
 #scrollbar2 .track { background-color: #deedf0; 
@@ -392,6 +392,25 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
 
+#scrollbar3 { width: 465px; clear: both; margin: 0px 0 10px;}
+#scrollbar3 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
+#scrollbar3 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
+#scrollbar3 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+}/*the thing in the middle of the scrollbar*/
+#scrollbar3 .scrollbar { position: relative; float: right; width: 15px; 
+margin-top:20px;}
+#scrollbar3 .track { background-color: #deedf0; 
+height: 100%; 
+width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}/*the thing that trackes the thing inside*/
+#scrollbar3 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar3 .thumb .end { overflow: hidden; height: 5px; width: 13px;}
+
+#scrollbar3 .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
 
 /*************************************************************/
@@ -693,4 +712,66 @@ width:65px;
 	border-top: 30px solid transparent;
 	border-bottom: 30px solid transparent;	
 	border-left: 30px solid blue;
+}
+
+
+/********************contact us****************************/
+#contactus{
+width:450px;
+margin:0 auto;
+}
+#contactus h1,p{	
+	text-align:center;
+}
+#contactus h1{
+	text-shadow:-4px 4px 2px #ffffff;
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+.emailDress{
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+	padding:10px;
+	float:left;
+}
+
+.boxShadow{
+-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+
+
+
+/**************suggestions*************/
+
+.suggestions input{
+	float:left;
+	margin-bottom:20px;
+}
+
+.suggestions h1{
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+}
+.suggestions textarea{
+	width:300px;
+}
+
+/**********************advertising****************************/
+
+.advertising{
+	text-align:center;
+	width:400px;
+	margin-left:30px;
+}
+
+.advertising h1{
+	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 }
