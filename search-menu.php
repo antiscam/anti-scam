@@ -15,7 +15,8 @@
                     <option value='tips'>Tips-Buyer</option>
                     <option value='tips'>Tips-Seller</option>
                 </select>
-                
+               
+               <!-- 
                 <h3 id="searchNameText">Opponent's Info:</h3>
                 <div id="opponentInfoBox">
                     <input type='field' placeholder="Opponent's Name" id="searchTextBox" class='textbox' name='search_opponent_name'/>  
@@ -28,17 +29,10 @@
                     <input type='field' placeholder="Opponent's Email" id="searchTextBox" class='textbox' name='search_opponent_email'/>
                     <input type='field' placeholder="Opponent's Phone" id="searchTextBox" class='textbox' name='search_opponent_phone'/>
                 </div>
-    
-                <h3 id="searchNameText">Category:</h3>
-                <select id="searchSelect" class='select' name='scam_category' >
-                  <option value='all'>All</option>
-                  <option value='industry'>Industry</option>
-                  <option value='retailstore'>RetailStore</option>
-                  <option value='transportation'>Transportation</option> 
-                  <option value='WholeSale'>WholeSale</option>
-                  <option value='WholeSale'>CreditCard</option>
-                  <option value='WholeSale'>Housing</option>
-                </select>
+    			-->
+                <h3 id="searchNameText">Category:</h3>  
+                 <?php include("search-category.php"); ?>
+               
                 <h3 id="searchNameText">Keywords:</h3>
                 <input type='field' placeholder="Words in the Title/Story" id="searchTextBox" class='textbox' name='keywords'/>         
                 <a  id="searchButtonLink" class='button' href="index.php" >Back</a>            
