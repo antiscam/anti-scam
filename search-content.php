@@ -63,7 +63,12 @@ if(isset($_POST['search']))
 				<div class='searchStoryContent'>$story_db</div>
 				<div class='separatingLine'></div>
 			</div>
+			
+			
 		";
+		echo"</div></div></div>";//end scroll bar 
+	echo "</div>"; //div main-content
+		
 	}
 
 	}
@@ -72,6 +77,5 @@ if(isset($_POST['search']))
 		echo"step for searching";
 	}
 	echo"</div>"; //searchContent
-	echo"</div></div></div>";//end scroll bar 
-	echo "</div>"; //div main-content
+	
 ?>

@@ -32,6 +32,9 @@ a
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius:15px;
+		-moz-box-shadow: -6px -9px 7px 1px #3a3a3a; 
+	-webkit-box-shadow:-6px -9px 7px 1px #3a3a3a; 
+	box-shadow: -2px 2px 7px 1px #3a3a3a; 
 }
 #top-header
 {
