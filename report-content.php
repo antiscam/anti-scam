@@ -75,7 +75,7 @@
                         <h1>Report A Honesty</h1>
                         <p id='layout-for-p'>Please provide informations as much as possible</p>
                                 
-                            <form action='report_scam.php' method='POST'>                            
+                            <form action='report.php' method='POST'>                            
                                 <h2>Opponent's Information:</h2> 
                                 <p>
                                     <input type='field' placeholder='Opponent's Name'  id='first_name_field' class='textbox' name='honesty_name'/>
@@ -85,7 +85,7 @@
                                     <input type='field' placeholder='Opponent's Address' id='opponent_address_field' class='textbox text_box_spec' name='honesty_address'/>
                                 </p>
                                  <p>
-                                    <input type='field' placeholder='Opponent's City' id='opponent_city_field' class='textbox' name='ohonesty_city'/>
+                                    <input type='field' placeholder='Opponent's City' id='opponent_city_field' class='textbox' name='honesty_city'/>
                                      <input type='field' placeholder='Opponent's State' id='opponent_state_field' class='textbox' name='honesty_state'/>
                                 </p>
                                  <p>

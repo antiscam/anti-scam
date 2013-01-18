@@ -166,7 +166,7 @@ function scam_button()
 			$sql = mysql_query("INSERT INTO report 
 				(user_id, report_type, name, name_id, address, city, state, country, zipcode, phone, email, story, category, likes,
 				 dislike,num_replys, num_view, date)
-						VALUES('$user_id_p', 'scam_report', '$scam_name_p', '$scam_id_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', 
+						VALUES('$user_id_p', 'scam', '$scam_name_p', '$scam_id_p', '$scam_address_p', '$scam_city_p', '$scam_state_p', 
 						'$scam_country_p', '$scam_zipcode_p', '$scam_phone', '$scam_email_p', '$scam_text_p', '$scam_category_p', '0', '0', '0', '0', now())")
 								 or die(mysql_error());
 		
@@ -203,8 +203,9 @@ function hoesty_button()
 			
 			//add this product into the database now
 			$sql = mysql_query("INSERT INTO report 
-				(user_id, report_type, name, address, city, state, country, zipcode, phone, email,story,category, likes, dislike, num_replys, num_view, date)
-						VALUES('$user_id_p', '$honesty_name_p', '$honesty_id_p', '$honesty_address_p', '$honesty_city_p', '$honesty_state_p',
+				(user_id, report_type, name, name_id, address, city, state, country, zipcode, phone, email, story, category, likes, dislike, 
+				num_replys, num_view, date)
+						VALUES('$user_id_p', 'honesty', '$honesty_name_p', '$honesty_id_p', '$honesty_address_p', '$honesty_city_p', '$honesty_state_p',
 						'$honesty_country_p', '$honesty_zipcode_p', '$honesty_phone_p', '$honesty_email_p', '$honesty_text_p', '$honesty_category_p',
 						 '0', '0', '0', '0', now())")
 								 or die(mysql_error());
@@ -220,34 +221,3 @@ function hoesty_button()
 
 
 
-<!--------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------ search.php  ---------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------->
-<?php
-function search()
-{
-	$user_id_p = $_COOKIE['id'];
-	$types_p = $_POST['types'];
-	$id_p = $_POST['search_opponent_id'];
-	$name_p = $_POST['search_opponent_name'];
-	$address_p = $_POST['search_opponent_address'];
-	$city_p = $_POST['search_opponent_city'];
-	$state_p = $_POST['search_opponent_state'];
-	$country_p = $_POST['search_opponent_country'];
-	$zipcode_p = $_POST['search_opponent_zipcode'];
-	$email_p = $_POST['search_opponent_email'];
-	$phone = $_POST['search_opponent_phone'];
-	$category_p = $_POST['scam_category'];
-	$keyword_p = $_POST['keywords'];
-	
-	$women_query = mysql_query("SELECT * FROM report WHERE report_type LIKE '%$types_p%' || name_id LIKE '%$name_p%' || name LIKE '%$name_p%'  ||
-	address LIKE '%$address_p%' || city LIKE '%$city_p%' || state LIKE '%$state_p%' || country LIKE '%$country_p%' || zipcode LIKE '%$zipcode_p%' || 	
-	email LIKE '%$email_p%' || phone LIKE '%$phone%' || category LIKE '%$category_p%'  || story LIKE '%$keyword_p%'") 
-	or die(mysql_error());  
-	while($row = mysql_fetch_assoc($women_query))
-	{
-		//search content php
-	}
-	
-}
-?>

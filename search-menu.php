@@ -10,8 +10,8 @@
             <form action='search.php' method='POST'>
                 <select id="searchSelect" class='select' name='types' >
                     <option value='all'>All</option>
-                    <option value='scams'>Scams</option>
-                    <option value='honesties'>Honesties</option> 
+                    <option value='scam'>Scams</option>
+                    <option value='honesty'>Honesties</option> 
                     <option value='tips'>Tips-Buyer</option>
                     <option value='tips'>Tips-Seller</option>
                 </select>
