@@ -353,6 +353,13 @@ top:0;
 #scrollbar1 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
 #scrollbar1 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
 #scrollbar1 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #cadde4), color-stop(2, #c6e1ea)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #cadde4 0%, #c6e1ea 200%); 
+border:3px solid #bdd1d8;
 }/*the thing in the middle of the scrollbar*/
 
 
@@ -362,8 +369,9 @@ margin-top:20px;}
 -moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+	
 }/*the thing that trackes the thing inside*/
-#scrollbar1 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar1 .thumb { height: 20px; width: 10px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
 #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
 
 #scrollbar1 .disable{ display: none; }
@@ -375,6 +383,13 @@ margin-top:20px;}
 #scrollbar2 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
 #scrollbar2 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
 #scrollbar2 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #cadde4), color-stop(2, #c6e1ea)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #cadde4 0%, #c6e1ea 200%); 
+border:3px solid #bdd1d8;
 }/*the thing in the middle of the scrollbar*/
 #scrollbar2 .scrollbar { position: relative; float: right; width: 15px; 
 margin-top:20px;}
@@ -385,7 +400,7 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 }/*the thing that trackes the thing inside*/
-#scrollbar2 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar2 .thumb { height: 20px; width: 10px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
 #scrollbar2 .thumb .end { overflow: hidden; height: 5px; width: 13px;}
 
 #scrollbar2 .disable{ display: none; }
@@ -396,6 +411,13 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 #scrollbar3 .viewport {width: 400px; height: 500px; overflow: hidden; position: relative;}
 #scrollbar3 .overview { list-style: none; position: absolute; left: 10px; top: 0; }
 #scrollbar3 .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #cadde4), color-stop(2, #c6e1ea)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #cadde4 0%, #c6e1ea 200%); 
+border:3px solid #bdd1d8;
 }/*the thing in the middle of the scrollbar*/
 #scrollbar3 .scrollbar { position: relative; float: right; width: 15px; 
 margin-top:20px;}
@@ -406,7 +428,7 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 }/*the thing that trackes the thing inside*/
-#scrollbar3 .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#scrollbar3 .thumb { height: 20px; width: 10px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
 #scrollbar3 .thumb .end { overflow: hidden; height: 5px; width: 13px;}
 
 #scrollbar3 .disable{ display: none; }
@@ -775,3 +797,6 @@ margin:0 auto;
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 }
+
+
+

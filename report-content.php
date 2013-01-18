@@ -130,8 +130,12 @@
  else
  {
 	 echo"
-	 <div class='content'>    	
-	 	plz log in first
+	 <div class='content form-content'>    	
+	 	<div id='contactus'>
+	 	<h1>Report Center</h1>
+		<p>Please Login before you report!</p> 
+		<p> If you are not a member yet, you could <a href='join.php'>join</a> now! It ONLY takes 10 secs!</p>
+		</div>
 	 </div>";
  }
 ?>
