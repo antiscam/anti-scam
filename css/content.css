@@ -29,6 +29,13 @@ height:auto;
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
 
 }
+
+.main_content_area
+{
+	margin:0 auto;
+	width:450px;
+	height:auto;
+}
 #main-content
 {
 	background-color: #c4fdd4;
@@ -217,6 +224,10 @@ border: 1px solid white;
 	top:1px;
 }
 
+#button_forgotP{
+	float:none;
+}
+
 #button_logout{
 	height:30px;
 	width:74px;
@@ -316,6 +327,7 @@ overflow:auto;
 
 .about h1{
 width:400px;
+padding:10px;
 }
 
 
@@ -420,7 +432,8 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 border:3px solid #bdd1d8;
 }/*the thing in the middle of the scrollbar*/
 #scrollbar3 .scrollbar { position: relative; float: right; width: 15px; 
-margin-top:20px;}
+margin-top:20px;
+}
 #scrollbar3 .track { background-color: #deedf0; 
 height: 100%; 
 width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
@@ -432,6 +445,35 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 #scrollbar3 .thumb .end { overflow: hidden; height: 5px; width: 13px;}
 
 #scrollbar3 .disable{ display: none; }
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
+#postScrollbar { width: 460px; clear: both; margin: 0px 0 10px; z-index:1;}
+#postScrollbar .viewport {width: 430px; height: 480px; overflow: hidden; position: relative;}
+#postScrollbar .overview { list-style: none; position: absolute; left: 10px; top: 0; }
+#postScrollbar .thumb { background-color: #cfddea; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+/* IE10 Consumer Preview */ background-image: -ms-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* Mozilla Firefox */ background-image: -moz-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+    /* Opera */ background-image: -o-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%); 
+	/* Webkit (Safari/Chrome 10) */background-image: -webkit-gradient(radial, center center, 0, center center, 487, color-stop(0, #cadde4), color-stop(2, #c6e1ea)); 
+	/* Webkit (Chrome 11+) */ background-image: -webkit-radial-gradient(center, ellipse farthest-side, #cadde4 0%, #c6e1ea 200%);
+	/* W3C Markup, IE10 Release Preview */ background-image: radial-gradient(ellipse farthest-side at center, #cadde4 0%, #c6e1ea 200%); 
+border:3px solid #bdd1d8;
+}/*the thing in the middle of the scrollbar*/
+#postScrollbar .scrollbar { position: relative; float: right; width: 15px; 
+margin-top:20px;}
+#postScrollbar .track { background-color: #deedf0; 
+height:80%; 
+width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit-border-radius:50px; border-radius:50px;
+-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
+	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
+	box-shadow: -2px 2px 7px 1px #4c4c4c;
+	z-index:1;
+}/*the thing that trackes the thing inside*/
+#postScrollbar .thumb { height: 20px; width: 10px; cursor: pointer; overflow: hidden; position: absolute; top: 0; z-index:2;}
+#postScrollbar .thumb .end { overflow: hidden; height: 5px; width: 13px;}
+
+#postScrollbar .disable{ display: none; }
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
 
@@ -511,7 +553,7 @@ width:13px; position: relative; padding: 0 1px; -moz-border-radius:50px; -webkit
 }
 
 
-#reportButton hover{
+.reportButton:hover{
 	background:-o-linear-gradient(bottom, #02aaec 5%, #caedfb 100%);
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #02aaec), color-stop(1, #caedfb) ); 
 	background:-moz-linear-gradient( center top, #02aaec 5%, #caedfb 100% );
@@ -728,14 +770,6 @@ width:65px;
 }
 
 /********************triangle*********************/
-.arrowRight {
-	width: 0; 
-	height: 0; 
-	border-top: 30px solid transparent;
-	border-bottom: 30px solid transparent;	
-	border-left: 30px solid blue;
-}
-
 
 /********************contact us****************************/
 #contactus{
@@ -744,12 +778,14 @@ margin:0 auto;
 }
 #contactus h1,p{	
 	text-align:center;
+
 }
 #contactus h1{
 	text-shadow:-4px 4px 2px #ffffff;
 	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+		padding:10px;
 }
 
 .emailDress{
@@ -779,6 +815,7 @@ margin:0 auto;
 	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+		padding:10px;
 }
 .suggestions textarea{
 	width:300px;
@@ -796,7 +833,229 @@ margin:0 auto;
 	-moz-box-shadow: -6px -9px 7px 1px #4c4c4c; 
 	-webkit-box-shadow:-6px -9px 7px 1px #4c4c4c; 
 	box-shadow: -2px 2px 7px 1px #4c4c4c; 
+		padding:10px;
 }
 
 
 
+/**********************post*********************/
+.postHeaderAdds{
+border:1px solid red;
+width:25px;
+float:right;
+margin-top:6px;
+}
+
+#postContent{
+border:1px solid gray;
+height:480px;
+width:460px;
+margin:0 auto;
+padding:0;
+z-index:1;
+}
+
+#postContent .date{
+	color:gray;
+	font-size:15px;
+//	border:1px solid green;
+	width:250px;
+	float:left;
+}
+
+#postContent .avoid{
+	color:gray;
+	font-style:italic;
+	font-size:15px;
+	//border:1px solid red;
+	width:120px;
+	float:right;
+}
+
+#avoidHover{
+	display:none;
+	margin:0;
+	padding:2px;
+	padding-left:6px;
+	padding-right:6px;
+	position:absolute;
+	background:#c6e1ea;
+	border:1px solid gray;	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	width:100px;
+}
+
+#postContent .avoid:hover +#avoidHover{
+	display:block;		
+}
+
+#postContent .userInfo{
+	width:90px;
+	border:1px solid red;	
+	float:left;
+}
+
+#postContent .avatar{
+	width:60px;
+	height:60px;
+	border:1px solid blue;
+	margin:0 auto;
+	padding:0;
+	background-color:white;
+}
+#postContent .userName{
+	width:60px;
+	border:1px solid green;
+	margin:0 auto;
+	padding:0;
+	font-size:12px;
+}
+
+.reportedSotry{
+	float:left;
+//	height:700px;
+}
+.postHead{
+	width:415px;
+	border:1px solid #FF0;
+	height:20px;
+	position:relative;
+}
+#postContent .postContentRight{
+	
+	width:320px;
+	border:1px solid red;
+	float:left;
+	margin-left:5px;
+}
+.user_comments{
+	clear:both;
+	margin-top:10px;	
+	/*following two lines used to clear the container*/
+	overflow: auto;
+	width: 100%
+}
+
+.postInfo .story{
+ border:1px solid green;
+}
+#forgotP h1{
+	width:300px;
+	margin:0 auto;
+	margin-top:40px;
+	margin-bottom:20px;
+	padding:10px;
+}
+
+
+/***************pageBar*********************/
+.pageBar{
+	background-color:#87f596;
+	width:460px;
+	height:36px;
+	background:-o-linear-gradient(bottom, #e6e6e6 5%, #dddddd 100%);
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.1, #e6e6e6), color-stop(1, #dddddd) ); 
+	background:-moz-linear-gradient( center top, #e6e6e6 5%, #dddddd 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6", endColorstr="#dddddd");
+	background: -o-linear-gradient(top,#e6e6e6,#dddddd);
+	margin:0px;
+	padding:0px;
+}
+.pageBar .button{
+	width:20px;
+	height:22px;
+	border:1px solid #acacac;
+	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+
+	
+	background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(241,241,241,1)), color-stop(51%,rgba(225,225,225,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* IE10+ */	
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+
+}
+
+.pageBar .button:hover{
+	cursor:pointer;
+}
+
+.pageBar .arrowLeft{
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;	
+	border-right: 6px solid blue;
+	border-left:0px;
+	margin:0 auto;
+	padding:0;
+	margin-top:-5px;
+}
+.pageBar .arrowRight {
+	width: 0; 
+	height: 0; 
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;	
+	border-left: 6px solid blue;
+	border-right:0px;
+	margin:0 auto;
+	padding:0;
+	margin-top:-5px;
+}
+.pageBar .line{
+	margin:0;
+	padding:0;
+	height:12px;
+	width:3px;
+	background-color:blue;
+	margin-top:-5px;		
+}
+
+.pageBar .floatL{
+	margin:0;
+	float:left;
+}
+
+.pageBar .floatR{ margin:0; float:right;}
+
+
+.pageBar .toEnd{
+	width:10px;
+	margin-top:-5px;
+}
+
+
+.space{
+width:100%;
+height:6px;
+}
+
+.pageBar .pageNumber{
+height:auto;
+width:25px;
+}
+
+.pageBar .table{
+	border:0;
+	margin:0 auto;
+}
+.pageBarLine{
+	margin:0;
+	padding:0;
+	height:12px;
+	widht:3px;
+	border:1px solid #39C;
+}
+.pageBar .table td{
+		margin:0;
+	padding:0;
+	padding-left:10px;
+}

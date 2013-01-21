@@ -1,5 +1,6 @@
 $(document).ready(function(){
    $('#scrollbar1').tinyscrollbar();
+   $('#postScrollbar').tinyscrollbar();
 });
 
 

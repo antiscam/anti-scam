@@ -13,8 +13,8 @@
     	<div id="contactus">
 	    	<h1>Contact Us</h1>
     	    <p>Please feel free to contact us  by email for any kind of concerns you might have!</p>
-            <p>
-            	 <span class='emailDress'>Manager: anti0scams@gmail.com</span>
+            <p class='emailDress'>
+				Manager: anti0scams@gmail.com
             </p>
         </div>
 	</div>
