@@ -1,6 +1,6 @@
 <?php
 echo"
-	<div id='right-content'>
+	<div id='right-content'>sdf
     </div>
     ";
 ?>
