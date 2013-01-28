@@ -1,3 +1,4 @@
+
 <?php
 echo"<div id='main-content' class='content'>";
 if((isset($_GET['search'])) || (isset($_POST['resortType'])))
@@ -16,7 +17,7 @@ if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 		
 
 		echo"
-    	<div id='searchContentHeader'>        
+    	<div class='contentHeader'>        
         	<div class='title'><a href='search.php'>Search</a>>$types_p</div>
 			<form action='report.php' id='report_sort'>
            		<button type='submit' id='reportButton' class='button reportButton' name='report' >Report</button>
