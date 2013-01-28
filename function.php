@@ -221,3 +221,34 @@ function hoesty_button()
 
 
 
+
+
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------- SEARCH.php  ----------------------------------------------------->
+<!----------------------------------------------------------------------------------------------------------------->
+<?php
+function set_up_pagination(&$item_per_page, &$page_query, &$pages, &$page, &$start, $types_p, $category_p, $keyword_p)
+{
+	/*** SET UP pagination  ***/ 
+		$item_per_page = 2; 
+		if($types_p == 'All')
+	{
+			$page_query = mysql_query("SELECT COUNT('id') FROM report WHERE (category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%' )") 
+	or die(mysql_error());  
+	}
+	else
+	{
+		$page_query = mysql_query("SELECT COUNT('id') FROM report WHERE (report_type LIKE '%$types_p%' && category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%') ") 
+	or die(mysql_error());  
+	}	
+	
+		$pages = ceil(mysql_result($page_query, 0) / $item_per_page); //print only 8 reco per page
+		//if top variable is set ex: page = 4 --> user cant change in url --> i user go to index set page =1  
+		$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+		$start= ($page - 1) * $item_per_page;
+}
+?>
+
+
+
+

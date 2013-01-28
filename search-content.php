@@ -2,10 +2,18 @@
 echo"<div id='main-content' class='content'>";
 if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 	{
+		//post variables
 		$types_p = $_GET['types'];
 		$category_p = $_GET['category'];
 		$keyword_p = $_GET['keywords'];
-
+		
+		//function variables
+		$item_per_page = 0;
+		$page_query = 0;
+		$pages = 0;
+		$page = 0;
+		$start = 0;
+		
 
 		echo"
     	<div id='searchContentHeader'>        
@@ -34,39 +42,43 @@ if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 					  <div class='searchContent'>
 		";
 		
+		
+		/////////////////////////////////////////////////////
+		//////////// function - set up pagination ///////////
+		/////////////////////////////////////////////////////
+		set_up_pagination($item_per_page, $page_query, $pages, $page, $start, $types_p, $category_p, $keyword_p);
 
-if(isset($_POST['resortType']))
-{
-	$sort_p = $_POST['resortType'];
-	if($sort_p == 'title'){$sort_p = 'name ASC';}
-	if($sort_p == 'date'){$sort_p = 'date ASC';}
-	if($sort_p == 'mostLikes'){$sort_p = 'likes DESC';}
-if($types_p == 'All')
-	{
-			$report_select_query = mysql_query("SELECT * FROM report WHERE (category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%' ) ORDER BY $sort_p ") 
-	or die(mysql_error());  
-	}
-	else
-	{
-		$report_select_query = mysql_query("SELECT * FROM report WHERE (report_type LIKE '%$types_p%' && category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%') ORDER BY $sort_p") 
-	or die(mysql_error());  
-	}	
-}
-else
-{	
-	if($types_p == 'All')
-	{
-			$report_select_query = mysql_query("SELECT * FROM report WHERE (category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%')") 
-	or die(mysql_error());  
-	}
-	else
-	{
-		$report_select_query = mysql_query("SELECT * FROM report WHERE (report_type LIKE '%$types_p%' && category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%')") 
-	or die(mysql_error());  
-	}
-}
+		
+		if(isset($_POST['resortType']))
+		{
+			$sort_p = $_POST['resortType'];
+			if($sort_p == 'title'){$sort_p = 'ORDER BY name ASC';}
+			if($sort_p == 'date'){$sort_p = 'ORDER BY date ASC';}
+			if($sort_p == 'mostLikes'){$sort_p = 'ORDER BY likes DESC';}
+		}
+		else
+		{
+			$sort_p = '';
+		}
 
-	
+
+		if($types_p == 'All')
+			{
+					$report_select_query = mysql_query("SELECT * FROM report WHERE (category = '$category_p') && (name_id LIKE '%$keyword_p%' || 
+					name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' ||
+				    country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || 
+					story LIKE '%$keyword_p%' ) $sort_p LIMIT $start, $item_per_page") 
+					or die(mysql_error());  
+			}
+			else
+			{
+				$report_select_query = mysql_query("SELECT * FROM report WHERE (report_type LIKE '%$types_p%' && category = '$category_p') && 
+				(name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || 
+				state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || 
+				email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%') $sort_p LIMIT $start, $item_per_page") 
+				or die(mysql_error());  
+			}	
+		
 		if(mysql_num_rows($report_select_query) != 0)
 		{
 			while($row = mysql_fetch_assoc($report_select_query))
@@ -88,10 +100,10 @@ else
 						<div class='searchStoryContent'>$story_db</div>
 						<div class='separatingLine'></div>
 					</div>
-				";
-					
+				";	
 			}
 		}
+		/*** no result found ***/
 		else
 		{
 			echo"<div id=''>
@@ -99,13 +111,18 @@ else
 				</div>";
 		}
 				echo"</div>";//end searchContent 
-			echo "</div></div></div>"; //div scrollbar1
-			
+				
+		///////////////////////////////
+		/****** pagination **********/
+		//////////////////////////////
+
+		echo "</div></div>"; include('pagebar.php'); echo"</div>"; //div scrollbar1		
 	}
 	else
 	{
 		echo"step for searching";
 	}
+	
 	
 	echo"</div>"; //searchContent
 	
