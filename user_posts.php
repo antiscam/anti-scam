@@ -8,19 +8,11 @@
 	<!---------->
 	<div id='full_content'>
 		<div class='menu' id='accountMenu'>
-			<div class='avatar'>
-				<form action="changeAvatar" class='avatarHover'>
-					Change
-				</form>
-			</div>
-			<div class="linkBarBlue"> <a href="account.php">Overview</a> <a href="user_general.php">Profile</a> <a href="user_posts.php">Posts</a> <a href="user_comments.php">Comments</a> </div>
+			<?php include("account_menu_avatar.php");?>
+			<?php include("account_menu.php");?>
 		</div>
 		<div id='main-content' class='content'>
-			<div class='contentHeader'>
-				<div class='name_contentHeader'> My Name </div>
-				<div class='date_contentHeader'> Member Since: 2012-02-12 </div>
-				<div id='like_contentHeader'> Likes:100 </div>
-			</div>
+			<?php include("account_contentHeader.php");?>
 			<div id="accountPostsContent" class='accountContent'>
 				<h1>Posts</h1>
 				<div id='scrollbar_user_posts'>
@@ -44,7 +36,7 @@
 								<div class="postsLikes">Likes:</div>
 								<div class="postsAvoid">Avoid:</div>
 								<div class="postsDate">Date:</div>
-								<div class="postsStory"> asdfasdfssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd </div>
+								<div class="postsStory"> asdfasdfssssssssssddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsssssssss </div>
 								<div class="separatingLine"></div>
 
 								<h2>My Post Title</h2>

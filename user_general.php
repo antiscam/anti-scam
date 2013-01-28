@@ -8,19 +8,11 @@
 	<!---------->
 	<div id='full_content'>
 		<div class='menu' id='accountMenu'>
-			<div class='avatar'>
-				<form action="changeAvatar" class='avatarHover'>
-					Change
-				</form>
-			</div>
-			<div class="linkBarBlue"> <a href="user_general.php">General</a> <a href="user_email_password.php">Email & Pawword</a> <a href="user_signature.php">Signature</a> <a href="user_notification.php">Notification</a> <a href="account.php">Back</a> </div>
+			<?php include("account_menu_avatar.php");?>
+			<?php include("account_profile_menu.php");?>
 		</div>
 		<div id='main-content' class='content'>
-			<div class='contentHeader'>
-				<div class='name_contentHeader'> My Name </div>
-				<div class='date_contentHeader'> Member Since: 2012-02-12 </div>
-				<div id='like_contentHeader'> Likes:100 </div>
-			</div>
+			<?php include("account_contentHeader.php");?>
 			<div class='accountContent'>
 				<h1>General</h1>
 				<form action="gengeralUpdate" class="normalForm accountFormSize">
@@ -61,7 +53,7 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><button type="submit" id="updateButton" class="button_green" name="update">Update</button></td>
+							<td><button type="submit" class="button_green account_updateButton" name="update">Update</button></td>
 							<td></td>
 						</tr>
 					</table>

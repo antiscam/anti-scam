@@ -1,0 +1,1 @@
+<div class="linkBarBlue"> <a href="account.php">Overview</a> <a href="user_general.php">Profile</a> <a href="user_posts.php">Posts</a> <a href="user_comments.php">Comments</a> </div>
