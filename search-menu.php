@@ -7,13 +7,13 @@
             <div class="searchMenuContent center">
             <p>enter "no" if you don't know for the certains feilds</p>
             <h3>Show Me:</h3>
-            <form action='search.php' method='POST'>
-                <select id="searchSelect" class='select' name='types' >
-                    <option value='all'>All</option>
-                    <option value='scam'>Scams</option>
-                    <option value='honesty'>Honesties</option> 
-                    <option value='tips'>Tips-Buyer</option>
-                    <option value='tips'>Tips-Seller</option>
+            <form action='search.php' method='GET'>
+                <select id="searchSelect" class='select' name='types'>
+                    <option value='All'>All</option>
+                    <option value='Scam'>Scams</option>
+                    <option value='Honesty'>Honesties</option> 
+                    <option value='Tips-Buyer'>Tips-Buyer</option>
+                    <option value='Tips-Seller'>Tips-Seller</option>
                 </select>
                
                <!-- 

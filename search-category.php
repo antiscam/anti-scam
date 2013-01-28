@@ -1,6 +1,6 @@
 <?php
 echo"
-     <select id='searchSelect' class='select' name='scam_category' >
+     <select id='searchSelect' class='select' name='category' >
       <option value='industry'>Industry</option>
       <option value='retailstore'>RetailStore</option>
       <option value='transportation'>Transportation</option> 
