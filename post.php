@@ -31,10 +31,13 @@
                                 </div>
                                 <div class="avoid">
                                      <a class='clickToIncrease' href="#">Avoid</a>:200 people!
-    
+     <div id="avoidHover">The number of people avoid the same scam!</div>
                                 </div>
+                               
                             </div>
-                            <div id="avoidHover">The number of people avoid the same scam!</div>                                               
+                            
+                            
+                                                                           
                             <div class='userInfo'>
                                 <div class='avatar'>                        
                                 </div>

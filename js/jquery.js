@@ -1,8 +1,10 @@
 $(document).ready(function(){
    $('#scrollbar1').tinyscrollbar();
    $('#postScrollbar').tinyscrollbar();
+   $('#scrollbar_user_posts').tinyscrollbar();
+   $('#scrollbar_email_password').tinyscrollbar();
+   
 });
-
 
 $("#honestyReport").click( $('#scrollbar2').tinyscrollbar());
 
