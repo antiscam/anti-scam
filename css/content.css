@@ -246,7 +246,19 @@ border: 1px solid white;
 	width:auto;
 	height:auto;
 	text-align:left;
+
 }
+#storyTextBox{
+	max-width:420px;
+}
+#report_selectBox select{
+width:200px;	
+height:30px;
+font-size:18px;
+font-weight:normal;
+}
+
+
 #report-background {
 	background-color:#dcf1f9;
 }
@@ -411,7 +423,7 @@ border: 1px solid white;
 	margin: 0px 0 10px;
 }
 #scrollbar2 .viewport {
-	width: 400px;
+	width: 440px;
 	height: 500px;
 	overflow: hidden;
 	position: relative;
@@ -1465,6 +1477,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', end
 .checkBoxWords {
 	font-size:12px;
 	margin:0 auto;
+}
+#button_next{
+font-size:30px;
 }
 .button_blue {
 	margin:0 auto;

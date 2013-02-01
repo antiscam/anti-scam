@@ -15,7 +15,7 @@
            <div id='hello' class='form report report-scambg'>";
     			// scrollbar 
 				echo"
-                <div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div class='viewport'><div class='overview'>
+                <div id='scrollbar1'><div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div><div class='viewport' style='width:440px;'><div class='overview'>
                 
                         <h1>Report A Scam</h1>
                         <p id='layout-for-p'>Please provide informations as much as possible</p>
@@ -47,19 +47,17 @@
                                     name='scam_email'/>
                                 </p>
                                 <p>
-                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='scroll' class='textbox report_textarea' name='scam_story'></textarea>
+                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='storyTextBox' class='textbox report_textarea' name='scam_story'></textarea>
                 
-                                </p>
-                                
-                                <select class='select' name='scam_category' >
-                                	<option value='industry'>Industry</option>
-                                	<option value='retailstore'>RetailStore</option>
-                                   	<option value='transportation'>Transportation</option> 
-                                    <option value='WholeSale'>WholeSale</option>                                     
-                                </select>
-                                
+                                </p> 
+								<div id='report_selectBox' class='center'>
+								";
+								
+								include('search-category.php');
+								echo"
+                                </div>
                                 <p>
-                                    <button type='submit' class='button' id='button_signup' name='button_scam' >Sign Up</button>
+                                    <button type='submit' class='button' id='button_next' name='button_scam' >Next</button>
                                </p> 
                             </form>
                            </div></div></div>"; //end of scroll bar            
@@ -102,19 +100,15 @@
                                     name='honesty_email'/>
                                 </p>
                                 <p>
-                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='scroll' class='textbox report_textarea' name='honesty_story'></textarea>
+                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='storyTextBox' class='textbox report_textarea' name='honesty_story'></textarea>
                 
                                 </p>
-                                
-                                <select class='select' name='honesty_category' >
-                                	<option value='industry'>Industry</option>
-                                	<option value='retailstore'>RetailStore</option>
-                                   	<option value='transportation'>Transportation</option> 
-                                    <option value='WholeSale'>WholeSale</option>                                     
-                                </select>
-                                
+								<div id='report_selectBox' class='center'>";
+								include('search-category.php');
+								echo"                                
+								</div>
                                 <p>
-                                    <button type='submit' class='button' id='button_signup' name='button_honesty' >Sign Up</button>
+                                    <button type='submit' class='button' id='button_next' name='button_honesty' >Next</button>
                                </p> 
                             </form> 
                              </div></div></div>"; //end of scroll bar                        
