@@ -8,11 +8,12 @@
 			$report_id = $_GET['r_id'];
 			$comment_p = $_POST['comment'];
 			
-			$user_query = mysql_query("SELECT * FROM user WHERE user_id = $user_id_db")or die(mysql_error());  
+			$user_query = mysql_query("SELECT * FROM report WHERE report_id = $r_id")or die(mysql_error());  
 			$row = mysql_fetch_assoc($user_query);
+				$to_id_r = $row['user_id'];
 	
 		$register = mysql_query("INSERT INTO comment (to_id, from_id, report_type, comment, likes, dislike, date)
-									VALUES('', '$from_id_c', '', '$comment_p', 'now()')")
+									VALUES('$to_id_r', '$from_id_c', '', '$comment_p', 'now()')")
 													 or die(mysql_error());
 		}
 
