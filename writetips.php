@@ -14,7 +14,7 @@
 		<h1>Write A Tip</h1>
 		<form action="writeTips">
 		<p>
-		<input type='text' class='textbox report_textarea' name='tips_title' placeholder="My short tip!">
+		<input type='text' class='textbox report_textarea' name='tips_title' placeholder="My short tip/Title!">
 		</p>
 		<p>
 		<textarea rows='5' cols='50' placeholder='Is there a story?' id='scroll' class='textbox report_textarea' name='tips_story'></textarea>

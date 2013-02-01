@@ -1,4 +1,13 @@
-<!-- header -->
+<div class='contentHeader'>        
+        	<div class='title'><a href='search.php'>Search</a>>Scams>Topic Name </div>
+            <button type='submit' id='reportButton' class='button reportButton' name='reply' >Reply</button>
+            <div id='faceBook' class='postHeaderAdds'>
+            	fb
+            </div>
+            <div id='emailToFriend' class='postHeaderAdds'>
+             EM
+            </div>            
+        </div><!-- header -->
 <?php
 	include("include/header.php");
 ?>
@@ -9,16 +18,7 @@
 <div id='full_content'>
 	<?php include("left-menu.php"); ?>
     <div id='main-content' class='content'>
-		<div id='searchContentHeader'>        
-        	<div class='title'><a href='search.php'>Search</a>>Scams>Topic Name </div>
-            <button type='submit' id='reportButton' class='button reportButton' name='reply' >Reply</button>
-            <div id='faceBook' class='postHeaderAdds'>
-            	fb
-            </div>
-            <div id='emailToFriend' class='postHeaderAdds'>
-             EM
-            </div>            
-        </div>
+		
         <div id='postContent'>
         	<div id='postScrollbar'>
         		<div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div>
