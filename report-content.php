@@ -23,27 +23,27 @@
                             <form action='report.php' method='POST'>
                                 <h2>Opponent's Information:</h2> 
                                 <p>
-                                    <input type='field' placeholder='Opponent's Name'  id='first_name_field' class='textbox' name='scam_name'/>
-									<input type='field' placeholder='Opponent's ID'  id='first_name_field' class='textbox' name='scam_id'/>
+                                    <input type='field' placeholder='Opponents Name'  id='first_name_field' class='textbox' name='scam_name'/>
+									<input type='field' placeholder='Opponents ID'  id='first_name_field' class='textbox' name='scam_id'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder='Opponent's Address' id='opponent_address_field' class='textbox text_box_spec' name='scam_address'/>
+                                    <input type='field' placeholder='Opponents Address' id='opponent_address_field' class='textbox text_box_spec' name='scam_address'/>
                                 </p>
                                  <p>
-                                    <input type='field' placeholder='Opponent's City' id='opponent_city_field' class='textbox' name='scam_city'/>
-                                     <input type='field' placeholder='Opponent's State' id='opponent_state_field' class='textbox' name='scam_state'/>
+                                    <input type='field' placeholder='Opponents City' id='opponent_city_field' class='textbox' name='scam_city'/>
+                                     <input type='field' placeholder='Opponents State' id='opponent_state_field' class='textbox' name='scam_state'/>
                                 </p>
                                  <p>
-                                    <input type='field' placeholder='Opponent's Country' id='opponent_country_field' class='textbox' name='scam_country'/>
-                                     <input type='field' placeholder='Opponent's Zip Code' id='opponent_zipcode_field' class='textbox' name='scam_zipcode'/>
+                                    <input type='field' placeholder='Opponents Country' id='opponent_country_field' class='textbox' name='scam_country'/>
+                                     <input type='field' placeholder='Opponents Zip Code' id='opponent_zipcode_field' class='textbox' name='scam_zipcode'/>
                                 </p>
                                 
                                 <p>
-                                    <input type='field' placeholder='Opponent's Phone' id='opponent-phone-field' class='textbox text_box_spec'
+                                    <input type='field' placeholder='Opponents Phone' id='opponent-phone-field' class='textbox text_box_spec'
                                      name='scam_phone'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder='Opponent's Email Address' id='opponent_email_field' class='textbox text_box_spec' 
+                                    <input type='field' placeholder='Opponents Email Address' id='opponent_email_field' class='textbox text_box_spec' 
                                     name='scam_email'/>
                                 </p>
                                 <p>
@@ -78,27 +78,27 @@
                             <form action='report.php' method='POST'>                            
                                 <h2>Opponent's Information:</h2> 
                                 <p>
-                                    <input type='field' placeholder='Opponent's Name'  id='first_name_field' class='textbox' name='honesty_name'/>
-									<input type='field' placeholder='Opponent's ID'  id='first_name_field' class='textbox' name='honesty_id'/>
+                                    <input type='field' placeholder='Opponents Name'  id='first_name_field' class='textbox' name='honesty_name'/>
+									<input type='field' placeholder='Opponents ID'  id='first_name_field' class='textbox' name='honesty_id'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder='Opponent's Address' id='opponent_address_field' class='textbox text_box_spec' name='honesty_address'/>
+                                    <input type='field' placeholder='Opponents Address' id='opponent_address_field' class='textbox text_box_spec' name='honesty_address'/>
                                 </p>
                                  <p>
-                                    <input type='field' placeholder='Opponent's City' id='opponent_city_field' class='textbox' name='honesty_city'/>
-                                     <input type='field' placeholder='Opponent's State' id='opponent_state_field' class='textbox' name='honesty_state'/>
+                                    <input type='field' placeholder='Opponents City' id='opponent_city_field' class='textbox' name='honesty_city'/>
+                                     <input type='field' placeholder='Opponents State' id='opponent_state_field' class='textbox' name='honesty_state'/>
                                 </p>
                                  <p>
-                                    <input type='field' placeholder='Opponent's Country' id='opponent_country_field' class='textbox' name='honesty_country'/>
-                                     <input type='field' placeholder='Opponent's Zip Code' id='opponent_zipcode_field' class='textbox' name='honesty_zipcode'/>
+                                    <input type='field' placeholder='Opponents Country' id='opponent_country_field' class='textbox' name='honesty_country'/>
+                                     <input type='field' placeholder='Opponents Zip Code' id='opponent_zipcode_field' class='textbox' name='honesty_zipcode'/>
                                 </p>
                                 
                                 <p>
-                                    <input type='field' placeholder='Opponent's Phone' id='opponent-phone-field' class='textbox text_box_spec'
+                                    <input type='field' placeholder='Opponents Phone' id='opponent-phone-field' class='textbox text_box_spec'
                                      name='honesty_phone'/>
                                 </p>
                                 <p>
-                                    <input type='field' placeholder='Opponent's Email Address' id='opponent_email_field' class='textbox text_box_spec' 
+                                    <input type='field' placeholder='Opponents Email Address' id='opponent_email_field' class='textbox text_box_spec' 
                                     name='honesty_email'/>
                                 </p>
                                 <p>

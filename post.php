@@ -12,11 +12,22 @@
 	include("include/header.php");
 ?>
 
+<!-- no variable in url -->
+<?php
+	if(!(isset($_GET['r_id'])))
+	{
+		header("location: index.php");
+		exit();		
+	}	
+?>
+
+
 <!---------->
 <!-- MENU -->
 <!---------->
 <div id='full_content'>
 	<?php include("left-menu.php"); ?>
+<<<<<<< HEAD
     <div id='main-content' class='content'>
 		
         <div id='postContent'>
@@ -171,6 +182,9 @@
         </div>
     </div>
     
+=======
+    <?php include("post_content.php"); ?>
+>>>>>>> fa986492820fc887d4da23bd0c39a20f790d0849
     <?php include("right-content.php"); ?>
 </div>
 
