@@ -5,99 +5,99 @@
 /*********************
 <!-- signup button -->
 *********************/
-function signup($error_class_first, $error_class_last,$error_class_email,$error_class_re_email, $error_class_password, $error_class_re_passwor)
+function signup()
 {
-	$join_error_class = "";
-		 
+	$error_class_first=""; $error_class_last=""; $error_class_email=""; $error_class_re_email=""; $error_class_password=""; $error_class_re_password="";
+	
 		 if(empty($_POST['first_name_input']))
 		 {
-			 echo "Missing field! Please fill in  all field! first name";
+			// echo "Missing field! Please fill in  all field! first name";
 			 $error_class_first = "errorClass"; 
 		 }
 		  else if(empty($_POST['last_name_input']))
 		 {
-			 echo "Missing field! Please fill in  all field! last name";
+			 //echo "Missing field! Please fill in  all field! last name";
 			  $error_class_last = "errorClass"; 
 		 }
 		else if(empty($_POST['email_input'])) 
 		{
-			 echo "Missing field! Please fill in  all field!";
+			 //echo "Missing field! Please fill in  all field!";
 			 $error_class_email = "errorClass";
 		}
 		else if(empty($_POST['re_email_input'])) 
 		 {
-			 echo "Missing field! Please fill in  all field!";
+			 //echo "Missing field! Please fill in  all field!";
 			 $error_class_re_email = "errorClass";
 		} 
 		else if(empty($_POST['password_input'])) 
 		{
-			 echo "Missing field! Please fill in  all field!";
+			 //echo "Missing field! Please fill in  all field!";
 			$error_class_password = "errorClass";
 		}
 		else if(empty($_POST['re_password_input']))
 		{
-			 echo "Missing field! Please fill in  all field!";
+			 //echo "Missing field! Please fill in  all field!";
 			$error_class_re_password = "errorClass";  
 		}
 		else if(empty($_POST['gender']))
 		{
-				echo "Missing field! Please fill in  all field!";
+				//echo "Missing field! Please fill in  all field!";
 		}
 		 else if((strlen($_POST['first_name_input']) < 2))
 		{
-			echo "Error - first name is too short!";
+			//echo "Error - first name is too short!";
 			$error_class_first = "errorClass";
 		}
 		else if((strlen($_POST['last_name_input']) < 2))
 		{
-			echo "Error - last name is too short!";
+			//echo "Error - last name is too short!";
 			$error_class_last = "errorClass";
 		}
 		else if((strlen($_POST['email_input']) < 4))
 		{
-			echo"Error - email is too short!";
+			//echo"Error - email is too short!";
 			$error_class_email = "errorClass";
 		}
 		else if((strlen($_POST['password_input']) < 6))
 		{
-			echo"Error - password is too short!";
+			//echo"Error - password is too short!";
 			$error_class_password = "errorClass";
 		}
 		else if((strlen($_POST['first_name_input']) >= 50))
 		{
-			echo "Error - first name is too long!";
+			//echo "Error - first name is too long!";
 			$error_class_first = "errorClass";
 		}
 		else if((strlen($_POST['last_name_input']) >= 50))
 		{
-			echo "Error - last name is too long!";
+			//echo "Error - last name is too long!";
 				$error_class_last = "errorClass";
 		}
 		else if((strlen($_POST['email_input']) >= 30))
 		{
-			echo "Error - email is too long!";
+			//echo "Error - email is too long!";
 			$error_class_email = "errorClass";
 		}
 		else if((strlen($_POST['password_input']) >= 50))
 		{
-			echo "Error - password is too long!";
+			//echo "Error - password is too long!";
 			$error_class_password = "errorClass";
 		}
 		else if(($_POST['email_input'] != $_POST['re_email_input']))
 		{
-			echo"Email do not match!";
+			//echo"Email do not match!";
 			$error_class_email = "errorClass";
 			$error_class_re_email = "errorClass";
 		}
 		else if(($_POST['password_input'] != $_POST['re_password_input']))
 		{
-				echo" Password do not match!";
+				//echo" Password do not match!";
 				$error_class_password = "errorClass";
 				$error_class_re_password = "errorClass";
 		}
 		else if((!preg_match("/[a-zA-Z0-9-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/", $_POST['email_input']) > 0))
 		{
-			echo"Invalid e-mail address";
+			//echo"Invalid e-mail address";
 			$error_class_email = "errorClass";
 		}
 		else
@@ -126,6 +126,13 @@ function signup($error_class_first, $error_class_last,$error_class_email,$error_
 				echo "Accont has been created!";
 			}
 		}
+		
+		$_SESSION['error_class_first'] = $error_class_first;
+		$_SESSION['error_class_last'] = $error_class_last;
+		$_SESSION['error_class_email'] = $error_class_email;
+		$_SESSION['error_class_re_email'] = $error_class_re_email;
+		$_SESSION['error_class_password'] = $error_class_password;
+		$_SESSION['error_class_re_password'] = $error_class_re_password;
  }
  ?>
  
@@ -230,7 +237,7 @@ function hoesty_button()
 function set_up_pagination(&$item_per_page, &$page_query, &$pages, &$page, &$start, $types_p, $category_p, $keyword_p)
 {
 	/*** SET UP pagination  ***/ 
-		$item_per_page = 2; 
+		$item_per_page = 10; 
 		if($types_p == 'All')
 	{
 			$page_query = mysql_query("SELECT COUNT('id') FROM report WHERE (category = '$category_p') && (name_id LIKE '%$keyword_p%' || name LIKE '%$keyword_p%' || address LIKE '%$keyword_p%' || city LIKE '%$keyword_p%' || state LIKE '%$keyword_p%' || country LIKE '%$keyword_p%' || zipcode LIKE '%$keyword_p%' || phone LIKE '%$keyword_p%' || email LIKE '%$keyword_p%' || story LIKE '%$keyword_p%' )") 

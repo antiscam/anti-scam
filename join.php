@@ -1,7 +1,9 @@
 <!-- header -->
 <?php
+	session_start(); //for errors
 	include("include/header.php");
 	include("function.php");
+	
 ?>
 
 

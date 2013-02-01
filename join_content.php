@@ -1,3 +1,13 @@
+<?php
+if(isset($_SESSION['error_class_first'])){ $error_class_first = $_SESSION['error_class_first']; }
+if(isset($_SESSION['error_class_last'])){ $error_class_last = $_SESSION['error_class_last'];  }
+if(isset($_SESSION['error_class_email'])){ $error_class_email = $_SESSION['error_class_email']; }
+if(isset($_SESSION['error_class_re_email'])){ $error_class_re_email = $_SESSION['error_class_re_email'];  }
+if(isset($_SESSION['error_class_password'])){ $error_class_password = $_SESSION['error_class_password'];  }
+if(isset($_SESSION['error_class_re_password'])){ $error_class_re_password = $_SESSION['error_class_re_password'];  }
+session_destroy();
+?>
+
 <div class='content form-content'>
     	<div class='form'>
             <h1>SIGN UP</h1>
@@ -40,3 +50,4 @@
             </form>
         </div>
     </div>
+    

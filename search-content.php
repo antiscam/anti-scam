@@ -24,16 +24,28 @@ if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 			</form>
             <div class='searchHeaderResortBar'>
 		        <div class='pageTracker'>Results 1-10 of 300</div>
-                <div id='resortBar'>Sort By: &nbsp; 
-					<form action='search.php?types=$types_p&category=$category_p&keywords=$keyword_p' method='POST'>
-						<select id='resortBarSelect' class='select' name='resortType' onchange='this.form.submit();'>
-							<option value='relevance'>Relevance</option>
-							<option value='title'>Title</option>
-							<option value='date'>Date</option>
-							<option value='mostLikes'>Most Likes</option> 
-						 </select>
-					 </form>
-                </div>
+                
+				<table id='resortBar'>
+				  <tr>
+					<td>
+						<div>Sort By: &nbsp; </div>
+					</td>
+					<td>
+						<form id='sort_bar' action='search.php?types=$types_p&category=$category_p&keywords=$keyword_p' method='POST'>
+							<select id='resortBarSelect' class='select' name='resortType' onchange='this.form.submit();'>
+								<option value='relevance'>Relevance</option>
+								<option value='title'>Title</option>
+								<option value='date'>Date</option>
+								<option value='mostLikes'>Most Likes</option> 
+							 </select>
+						 </form>
+					 </td>
+				  </tr>
+				</table>
+
+				
+				
+				
             </div>
         </div>
 		<div id='scrollbar1'>
@@ -84,6 +96,7 @@ if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 		{
 			while($row = mysql_fetch_assoc($report_select_query))
 			{
+				$repost_id_db = $row['report_id'];
 				$user_id_db = $row['user_id'];
 				$name_db = $row['name'];
 				$date_db = $row['date'];
@@ -95,10 +108,10 @@ if((isset($_GET['search'])) || (isset($_POST['resortType'])))
 				
 				echo"
 					<div id='searchStory1' class='searchStory'>
-						<div class='searchTitle'><a href='#'>$name_db</a></div>
+						<div class='searchTitle'><a href='post.php?r_id=$repost_id_db'>$name_db</a></div>
 						<div class='searchDate'>Date: $date_db</div>
 						<div class='searchAuthor'>$first_name_db</div>
-						<div class='searchStoryContent'>$story_db</div>
+						<div class='searchStoryContent'  style='overflow:hidden;height:60px;'>$story_db</div>
 						<div class='separatingLine'></div>
 					</div>
 				";	
