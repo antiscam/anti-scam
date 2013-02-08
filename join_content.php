@@ -41,7 +41,7 @@ session_destroy();
                     <input type="radio" id='male-radio' class='radio' name="gender"  value="male"> <label>Male</label>
                </p> 
                <p>
-                    By clicking Sing Up, you agree to our <a href='aboutus.php'>Terms and Conditions</a> and that you have read our <a href='aboutus.php'>Privacy Policy				
+                    By clicking Sing Up, you agree to our <a href='terms_conditions.php'>Terms and Conditions</a> and that you have read our <a href='privacy_policy.php'>Privacy Policy				
                     </a>
                </p>
                <p>

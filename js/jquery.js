@@ -8,16 +8,32 @@ $(document).ready(function(){
 
 $("#honestyReport").click( $('#scrollbar2').tinyscrollbar());
 
-$("#terms").click(function(){
+/*
+$("#terms").click(function(){	
 	$(".about").load("./about/terms1.txt");
 	$('#scrollbar1').tinyscrollbar();
 
 });
 
 $("#privacy-policy").click(function(){
+	
 	$(".about").load("./about/privacy_policy.txt");
 	$('#scrollbar1').tinyscrollbar();
-
 });
 
+$("#footer_privacy_policy").click(function(){
+	 window.location = "aboutus.php";	
+	$(window).load(function(){
+		 alert("window is loaded");
+		 $(".about").load("./about/privacy_policy.txt");
+	});
+});
+$("#footer_term_conditions").click(function(){
+	 window.location = "aboutus.php";		 
+	$(window).load(function(){
+		 alert("window is loaded");
+		 $(".about").load("./about/terms1.txt");
+	});
+});
+*/
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");

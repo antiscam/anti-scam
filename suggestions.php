@@ -24,7 +24,6 @@
                     <textarea rows='5' cols='50' placeholder='What is your suggestion?' id='suggestionBox' class='textbox report_textarea' name='scam_story'></textarea>
                 
 					</p>
-                    <p>We need a robot tester!</p>
                    <p>
                         <button type="submit" class='button' id='button_signup' name="signup" >Send</button>
                    </p>  

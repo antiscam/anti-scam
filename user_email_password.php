@@ -25,7 +25,7 @@
 					</div>
 					<div class='viewport'>
 						<div class='overview'>
-							<form action="email&pawwordUpdate" class="normalForm accountFormSize">
+							<form action="email&passwordUpdate" class="normalForm accountFormSize">
 								<p>If you do not wish to change your password/email just leave the section blank.</p>
 								<h2>Email</h2>
 								<table>
