@@ -1,6 +1,9 @@
 <?php
  if((isset($_COOKIE['firstname']))) /*** HAS TO BE LOGED IN ***/
  {
+	if(isset($_SESSION['error_class'])){ $error_class = $_SESSION['error_class'];} else {$error_class = 'errorClass'; }	
+	session_destroy();
+	 
 	 echo"
 	<div class='content'>    	
         <div id='TabbedPanels1' class='TabbedPanels'>
@@ -47,7 +50,8 @@
                                     name='scam_email'/>
                                 </p>
                                 <p>
-                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='storyTextBox' class='textbox report_textarea' name='scam_story'></textarea>
+                                    <textarea rows='5' cols='50' placeholder='What has Happened?' id='storyTextBox' 
+									class='textbox report_textarea $error_class' name='scam_story'></textarea>
                 
                                 </p> 
 								<div id='report_selectBox' class='center'>
@@ -132,4 +136,6 @@
 		</div>
 	 </div>";
  }
+ 
+ 
 ?>

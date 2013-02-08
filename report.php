@@ -1,5 +1,6 @@
 <!-- header -->
 <?php
+	session_start(); //for errors
 	include("include/header.php");
 	include("function.php");
 ?>
@@ -10,9 +11,11 @@
 <!----------------->
 <?php
 	
+	
 	if(isset($_POST['button_scam']))
 	{
-		scam_button();
+		$error_class = "";
+		scam_button($error_class);
 	}
 ?>
 

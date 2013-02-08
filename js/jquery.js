@@ -1,3 +1,7 @@
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+////////////////////////// Ready ///////////////////////////////
+///////////////////////////////////////////////////////////////
 $(document).ready(function(){
    $('#scrollbar1').tinyscrollbar();
    $('#postScrollbar').tinyscrollbar();
@@ -5,6 +9,37 @@ $(document).ready(function(){
    $('#scrollbar_email_password').tinyscrollbar();
    
 });
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+////////////////////////// AJAX ///////////////////////////////
+///////////////////////////////////////////////////////////////
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $("#honestyReport").click( $('#scrollbar2').tinyscrollbar());
 
@@ -21,6 +56,7 @@ $("#privacy-policy").click(function(){
 	$('#scrollbar1').tinyscrollbar();
 });
 
+<<<<<<< HEAD
 $("#footer_privacy_policy").click(function(){
 	 window.location = "aboutus.php";	
 	$(window).load(function(){
@@ -37,3 +73,18 @@ $("#footer_term_conditions").click(function(){
 });
 */
 var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+=======
+
+
+
+
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+
+
+
+
+
+
+
+
+>>>>>>> 8fa0c35e615feddb7b09b5053764e35b51d92163

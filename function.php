@@ -139,8 +139,12 @@ function signup()
  
  
 
- 
- 
+
+
+
+
+
+
 <!----------------------------------------------------------------------------------------------------------------->
 <!----------------------------------------------- Report.php  ----------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------------->
@@ -148,11 +152,13 @@ function signup()
 /*******************
 <!-- scam button -->
 *******************/
-function scam_button()
+function scam_button($error_class)
 {
+
 	 if(empty($_POST['scam_story']))
 		{
 			echo" enter story";
+			
 		}
 		else
 		{
@@ -178,13 +184,17 @@ function scam_button()
 								 or die(mysql_error());
 		
 			echo "every thing is ok";
+			$error_class ="defaultClass";
+			$_SESSION['error_class'] = $error_class;
+			
 //stop from adding double on refresh
 header("location: report.php");
 exit();
 		}
-		
-
+	
+	
 }
+
 
 
 function hoesty_button()
@@ -225,6 +235,30 @@ function hoesty_button()
 ?>
 
 
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------------->
+<!----------------------------------------------- TIP PREWVIEW.php  ----------------------------------------------------->
+<!-----------------------------------------------------------------------------------------------------------------> 
+<?php
+ function store_tip_db()
+ {
+	$tip_title_g = $_GET['tips_title'];
+	$tip_story_g = $_GET['tips_story'];
+	$user_id_c = $_COOKIE['id'];
+		
+	$tip1_upload = mysql_query("INSERT INTO tip1 
+				(user_id, title, story, likes, dislike, date, time)
+						VALUES('$user_id_c', '$tip_title_g', '$tip_story_g', '0', '0', now(), now())")
+								 or die(mysql_error());
+	
+	header("location: index.php");
+	exit(); 
+ }
+?>
 
 
 
