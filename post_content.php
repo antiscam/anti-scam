@@ -7,27 +7,54 @@
 		$report_id_g = $_GET['r_id'];
 		if(isset($_POST['add_comment']))
 		{
-			//if(!(empty($_post['comment'])))
-				//{
+			if((empty($_POST['comment'])))
+				{
+					echo"failer";
+				}
+				else
+				{
 					$from_id_c = $_COOKIE['id'];
 					
 					$comment_p = $_POST['comment'];
-					echo"$comment_p";
 					$report_query_s = mysql_query("SELECT * FROM report WHERE report_id = $report_id_g")or die(mysql_error());  
 					$row = mysql_fetch_assoc($report_query_s);
 						$to_id_r = $row['user_id'];
-						$report_type_r = $row['report_type'];
 			
-					$comment_insert = mysql_query("INSERT INTO comment (to_id, from_id, report_type, comment, likes, dislike, date)
-											VALUES('$to_id_r', '$from_id_c', '$report_type_r', '$comment_p', '0', '0', 'now()')")
+					$comment_insert = mysql_query("INSERT INTO comment (to_id, from_id, report_id, comment, likes, dislike, date)
+											VALUES('$to_id_r', '$from_id_c', '$report_id_g', '$comment_p', '0', '0', now())")
 															 or die(mysql_error());
-				//}
+				//stop from adding double on refresh
+				header("location: post.php?r_id=$report_id_g");
+				exit();
+				}
 		}
-//stop from adding double on refresh
-	//header("location: post.php?r_id='$report_id_g'");
-	//exit();
+
 	}
 ?>
+
+
+
+<!------------------->
+<!-- add likes  -->
+<!------------------>
+<?php
+if(isset($_GET['r_id']) && isset($_GET['c_id']))
+	{
+		$report_id_g = $_GET['r_id'];
+		$comment_id_g = $_GET['c_id'];
+	
+	$comment_query = mysql_query("SELECT * FROM comment WHERE  comment_id = $comment_id_g")or die(mysql_error());  
+	$row = mysql_fetch_assoc($comment_query);
+		$likes_db = $row['likes'];
+		$u_likes_db = $likes_db + 1;
+	
+	$comment_update= mysql_query("UPDATE comment
+				                 SET likes = '$u_likes_db'
+                                    WHERE comment_id = $comment_id_g") or die(mysql_error());
+		
+	}
+?>
+
 
 
 
@@ -62,13 +89,13 @@ if((isset($_GET['r_id'])))
 	$row = mysql_fetch_assoc($user_query);
 		$first_name_db = $row['first_name'];
 		$last_name_db = $row['last_name'];
+		
 	
-	
-	
+	//top menu
 	echo"
 	<div id='main-content' class='content'>
 			<div id='searchContentHeader'>        
-				<div class='title'><a href='search.php'>Search</a>>$report_type_db>Topic Name </div>
+				<div class='title'><a href='search.php'>Search</a>>$report_type_db>$name_db </div>
 				<div id='faceBook' class='postHeaderAdds'>
 					fb
 				</div>
@@ -76,22 +103,28 @@ if((isset($_GET['r_id'])))
 				 EM
 				</div>            
 			</div>
+	";		
+	
+	
+	echo"
 			<div id='postContent'>
 				<div id='postScrollbar'>
 					<div class='scrollbar'><div class='track'><div class='thumb'><div class='end'></div></div></div></div>
 					<div class='viewport'>
 						<div class='overview'>                    
-							<div class='reportedSotry'>
+							<div class='reportedSotry'>";
+								
+								//top yellow box
+								echo"
 								<div class='postHead'>
 									<div class='date'>
 										 Posted at $date_db
 									</div>
 									<div class='avoid'>
 										 <a class='clickToIncrease' href='#'>Avoid</a>:200 people!
-		 <div id='avoidHover'>The number of people avoid the same scam!</div>
+										 <div id='avoidHover'>The number of people avoid the same scam!</div>
 									</div>
-								   
-								</div>";
+								</div>"; //end of posthead div
 								
 								
 								//person who posted the post - information
@@ -105,7 +138,7 @@ if((isset($_GET['r_id'])))
 									<div class='userDecription'>
 										descriptions
 									</div>
-								</div>";
+								</div>";//end of userInfo div
 								
 								
 								//Opponent's Information:
@@ -125,10 +158,10 @@ if((isset($_GET['r_id'])))
 											$story_db
 										</div>
 									</div>
-								</div>                    
-							</div>";
-							
-							//add comment
+								</div> ";//end of postcontentRight div
+								
+								
+								//add comment
 							if((isset($_COOKIE['firstname'])))
 							{
 								echo"
@@ -142,56 +175,68 @@ if((isset($_GET['r_id'])))
 							}
 							
 							
+							
+							
 							//display Comment
-							$comment_query = mysql_query("SELECT * FROM comment WHERE report_type = '$report_type_db' ORDER BY comment_id DESC")or die(mysql_error());  
+							$comment_query = mysql_query("SELECT * FROM comment WHERE report_id = '$r_id_g' ORDER BY comment_id DESC")
+								or die(mysql_error());  
 							while($row = mysql_fetch_assoc($comment_query))
 							{
+								$comment_id_db = $row['comment_id'];
 								$to_id_db = $row['to_id'];
 								$from_id_db = $row['from_id'];
 								$comment_db = $row['comment'];
 								$likes_c_db = $row['likes'];
 								$dislike_c_db = $row['dislike'];
 								$date_c_db = $row['date'];
-							echo
-							"
-							<div class='user_comments'>
-								<div class='separatingLine' style='clear:both;'></div>
-								<div class='postHead'>                            
-									<div class='date'>
-										 Posted at $date_c_db
-									</div>      
-									<div class='avoid'>
-										<a class='clickToIncrease' href='#'>Likes:</a>$likes_db
-									</div>
-								</div>
-								<div class='userInfo'>
-									<div class='avatar'>                        
-									</div>
-									<div class='userName'>
-										myName
-									</div>
-									<div class='userDecription'>
-										descriptions
-									</div>
-								</div>
-								<div class='postContentRight'>
-									<div class='comments'>$comment_db</div>
-								</div>
-							</div>
-							";
+								
+								$user_from = mysql_query("SELECT * FROM user WHERE user_id = $from_id_db")or die(mysql_error());  
+								$row = mysql_fetch_assoc($user_from);
+									$first_f_name_db = $row['first_name'];
+									$last_f_name_db = $row['last_name'];
+		
+								//add comment
+								echo"<div class='user_comments'>";
+									echo"<div class='separatingLine' style='clear:both;'></div>";
+									echo"
+									<div class='postHead'>                            
+										<div class='date'>
+											 Posted at $date_c_db
+										</div>      
+										<div class='avoid'>
+											<a href='post.php?r_id=$r_id_g&c_id=$comment_id_db' class='clickToIncrease' id='post_comment_like' 
+												name='post_comment_like'>Likes:</a>$likes_c_db
+										</div>
+									</div>"; //end of postHead div
+									
+									echo"
+										<div class='userInfo'>
+										<div class='avatar'>                        
+										</div>
+										<div class='userName'>
+											$first_f_name_db $last_f_name_db 
+										</div>
+										<div class='userDecription'>
+											descriptions
+										</div>
+									</div>";  //end of userInfo div
+									
+									//display comment 
+									echo"<div class='postContentRight'>
+											<div class='comments'>$comment_db</div>
+										</div>";//end of postContentRight div
+									
+								echo"</div>"; //end of user_comments div
 							}
-							
-					echo"		                  
-						</div>                    
-					</div>
-				</div>
-			</div>
-		</div>
-	
-	";
+			
+						echo"</div>"; //end of reportedsotry div
+					echo"</div>"; //end of overview div
+				echo"</div>"; //end of viewport div
+			echo"</div>";	//end of postScrollbar div			
+		echo"</div>";	//end of post content	div			
+	echo"</div>"; //end of main-conent div
 }
 ?>
-
 
 
 

@@ -17,7 +17,6 @@
 <!---------->
 <div id='full_content'>
 	<?php include("left-menu.php"); ?>
-     
     <?php include("post_content.php"); ?>
     <?php include("right-content.php"); ?>
 </div>
